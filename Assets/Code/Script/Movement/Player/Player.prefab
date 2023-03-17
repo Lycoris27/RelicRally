@@ -319,7 +319,7 @@ MonoBehaviour:
     m_ActionId: 27c2bfb1-4806-47be-81e4-5e4616136cd8
     m_ActionName: Player/Slide[/Keyboard/c]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Controller
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
