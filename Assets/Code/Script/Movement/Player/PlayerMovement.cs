@@ -52,14 +52,16 @@ namespace ronan.player
         public bool sliding;
         public bool climbing;
 
-        float horizontalInput;
-        float verticalInput;
+        public float horizontalInput;
+        public float verticalInput;
         Vector2 movementInput;
 
         Vector3 moveDirection;
 
         Rigidbody rb;
         public PlayerInputs playerInputs;
+        private InputActionAsset inputAsset;
+        private InputActionMap player;
 
         public MovementState state;
         public enum MovementState
@@ -75,7 +77,9 @@ namespace ronan.player
 
         private void Awake()
         {
-            playerInputs = new PlayerInputs();
+            //playerInputs = new PlayerInputs();
+            inputAsset = this.GetComponent<PlayerInput>().actions;
+            player = inputAsset.FindActionMap("Player");
         }
         private void Start()
         {
@@ -101,11 +105,8 @@ namespace ronan.player
         {        
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-
-
             onSlide = OnSlope();
 
-            MyInput();
             SpeedControl();
             StateHandler();
 
@@ -123,33 +124,21 @@ namespace ronan.player
         {
             MovePlayer();
         }
-
-        private void MyInput()
+        public void OnMove(InputAction.CallbackContext context)
         {
-            Vector2 movIn = playerInputs.Player.Movement.ReadValue<Vector2>();
+            Vector2 movIn = context.ReadValue<Vector2>();
             movementInput = movIn;
             horizontalInput = movementInput.x;
             verticalInput = movementInput.y;
-
-            if (playerInputs.Player.Jump.WasPressedThisFrame() && readyToJump && grounded)
+        }
+        public void OnJump(InputAction.CallbackContext context)
+        {
+            if (readyToJump)
             {
-
                 readyToJump = false;
-
                 Jump();
-
-                Invoke(nameof(ResetJump), jumpCooldown); 
+                Invoke(nameof(ResetJump), jumpCooldown);
             }
-
-            if (playerInputs.Player.Crouch.WasPressedThisFrame())
-            {
-                transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-                rb.AddForce(Vector3.down * 10f, ForceMode.Impulse);
-            } else if (playerInputs.Player.Crouch.WasReleasedThisFrame())
-            {
-                transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-            }
-
         }
 
         private void StateHandler()
