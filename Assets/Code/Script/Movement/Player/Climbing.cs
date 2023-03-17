@@ -95,13 +95,19 @@ namespace ronan.player
 
         private void StateMachine()
         {
+            if (wallFront && !climbing && climbTimer == 0)
+            {
+                Vector3 forceToApply = new Vector3(0, -0.2f, 0);
+                rb.AddForce(forceToApply, ForceMode.Impulse);
+            } else
+
             if (wallFront && pi.Player.Jump.IsInProgress() && wallLookAngle < maxWallLookAngle && !exitingWall)
             {
                 if (!climbing && climbTimer > 0) StartClimbing();
 
                 if (climbTimer > 0) climbTimer -= Time.deltaTime;
                 if (climbTimer < 0) StopClimbing();
-            }
+            } 
 
             else if (exitingWall)
             {
@@ -134,6 +140,8 @@ namespace ronan.player
         {
             climbing = false;
             pm.climbing = false;
+
+            climbTimer = 0f;
         }
 
         private void ClimbJump()
