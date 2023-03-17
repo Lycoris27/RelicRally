@@ -50,6 +50,94 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Movement"",
+            ""id"": ""4add7f2d-eb11-442d-ac3a-6fbb62a26866"",
+            ""actions"": [
+                {
+                    ""name"": ""Up"",
+                    ""type"": ""Button"",
+                    ""id"": ""a5ca10e7-c1a0-4664-83fb-3de053228d72"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Down"",
+                    ""type"": ""Button"",
+                    ""id"": ""9080499d-3b00-49b5-a441-8749f4f91c13"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Left"",
+                    ""type"": ""Button"",
+                    ""id"": ""5a4573fa-cb17-4af8-85f0-d18a2dd35625"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Right"",
+                    ""type"": ""Button"",
+                    ""id"": ""a2ca9a35-73c7-4858-979a-dfd61c5eb05b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""ac22b117-3b63-4c6b-9e02-b546f6316af0"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Up"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""156fcb05-b67f-4c5a-93a1-dd11f3bf3d53"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Down"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3ad6d94f-4cb0-4ae2-af7f-6556e1c54ff2"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ad52741b-d09a-4ab8-8717-dad842730a07"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -118,6 +206,12 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_OpenMenu = m_UI.FindAction("OpenMenu", throwIfNotFound: true);
+        // Movement
+        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
+        m_Movement_Up = m_Movement.FindAction("Up", throwIfNotFound: true);
+        m_Movement_Down = m_Movement.FindAction("Down", throwIfNotFound: true);
+        m_Movement_Left = m_Movement.FindAction("Left", throwIfNotFound: true);
+        m_Movement_Right = m_Movement.FindAction("Right", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -206,6 +300,63 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
         }
     }
     public UIActions @UI => new UIActions(this);
+
+    // Movement
+    private readonly InputActionMap m_Movement;
+    private IMovementActions m_MovementActionsCallbackInterface;
+    private readonly InputAction m_Movement_Up;
+    private readonly InputAction m_Movement_Down;
+    private readonly InputAction m_Movement_Left;
+    private readonly InputAction m_Movement_Right;
+    public struct MovementActions
+    {
+        private @PlayerInputMap m_Wrapper;
+        public MovementActions(@PlayerInputMap wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Up => m_Wrapper.m_Movement_Up;
+        public InputAction @Down => m_Wrapper.m_Movement_Down;
+        public InputAction @Left => m_Wrapper.m_Movement_Left;
+        public InputAction @Right => m_Wrapper.m_Movement_Right;
+        public InputActionMap Get() { return m_Wrapper.m_Movement; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
+        public void SetCallbacks(IMovementActions instance)
+        {
+            if (m_Wrapper.m_MovementActionsCallbackInterface != null)
+            {
+                @Up.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnUp;
+                @Up.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnUp;
+                @Up.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnUp;
+                @Down.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnDown;
+                @Down.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnDown;
+                @Down.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnDown;
+                @Left.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnLeft;
+                @Left.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnLeft;
+                @Left.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnLeft;
+                @Right.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnRight;
+                @Right.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnRight;
+                @Right.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnRight;
+            }
+            m_Wrapper.m_MovementActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Up.started += instance.OnUp;
+                @Up.performed += instance.OnUp;
+                @Up.canceled += instance.OnUp;
+                @Down.started += instance.OnDown;
+                @Down.performed += instance.OnDown;
+                @Down.canceled += instance.OnDown;
+                @Left.started += instance.OnLeft;
+                @Left.performed += instance.OnLeft;
+                @Left.canceled += instance.OnLeft;
+                @Right.started += instance.OnRight;
+                @Right.performed += instance.OnRight;
+                @Right.canceled += instance.OnRight;
+            }
+        }
+    }
+    public MovementActions @Movement => new MovementActions(this);
     private int m_KeyboardMouseSchemeIndex = -1;
     public InputControlScheme KeyboardMouseScheme
     {
@@ -254,5 +405,12 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
     public interface IUIActions
     {
         void OnOpenMenu(InputAction.CallbackContext context);
+    }
+    public interface IMovementActions
+    {
+        void OnUp(InputAction.CallbackContext context);
+        void OnDown(InputAction.CallbackContext context);
+        void OnLeft(InputAction.CallbackContext context);
+        void OnRight(InputAction.CallbackContext context);
     }
 }
