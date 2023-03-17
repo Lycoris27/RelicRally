@@ -23,41 +23,35 @@ namespace ronan.player {
         public float slideYScale = 0.5f;
         private float startYScale;
 
+        bool slide = false;
         Vector2 movementInput;
 
-
-        private void Awake()
-        {
-            pi = new PlayerInputs();
-        }
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
             pm = GetComponent<PlayerMovement>();
 
             startYScale = playerObj.localScale.y;
+        }
 
-        }
-        private void OnEnable()
+        public void OnSlide(InputAction.CallbackContext context)
         {
-            pi.Enable();
+            float input = context.ReadValue<float>();
+            if (input > 0.5f) slide = true; else slide = false;
         }
-        private void OnDisable()
+        public void OnMove(InputAction.CallbackContext context)
         {
-            pi.Disable();
+            movementInput = context.ReadValue<Vector2>();
         }
 
         private void Update()
         {
-            Vector2 movIn = pi.Player.Movement.ReadValue<Vector2>();
-            movementInput = movIn;
-
-            if (pi.Player.Slide.WasPressedThisFrame() && movementInput != Vector2.zero)
+            if (slide && movementInput != Vector2.zero)
             {
                 StartSlide();
             }
 
-            if (pi.Player.Slide.WasReleasedThisFrame() && pm.sliding)
+            if (!slide && pm.sliding)
             {
                 StopSlide();
             }

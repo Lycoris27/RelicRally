@@ -45,6 +45,10 @@ namespace ronan.player
         private RaycastHit slopeHit;
         private bool exitingSlope;
 
+        //Input action context
+        private bool jump = false;
+        private bool run = false;
+
 
 
         public Transform camOrientation;
@@ -52,8 +56,8 @@ namespace ronan.player
         public bool sliding;
         public bool climbing;
 
-        public float horizontalInput;
-        public float verticalInput;
+        float horizontalInput;
+        float verticalInput;
         Vector2 movementInput;
 
         Vector3 moveDirection;
@@ -70,17 +74,10 @@ namespace ronan.player
             sprinting,
             wallrunning,
             climbing,
-            crouching,
             sliding,
             air
         }
 
-        private void Awake()
-        {
-            //playerInputs = new PlayerInputs();
-            inputAsset = this.GetComponent<PlayerInput>().actions;
-            player = inputAsset.FindActionMap("Player");
-        }
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
@@ -92,21 +89,13 @@ namespace ronan.player
             startYScale = transform.localScale.y;
         }
 
-        private void OnEnable()
-        {
-            playerInputs.Enable();
-        }
-        private void OnDisable()
-        {
-            playerInputs.Disable();
-        }
-
         private void Update()
         {        
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
             onSlide = OnSlope();
 
+            MyInput();
             SpeedControl();
             StateHandler();
 
@@ -120,24 +109,38 @@ namespace ronan.player
 
         }
 
+        public void OnJump(InputAction.CallbackContext context)
+        {
+            float input  = context.ReadValue<float>();
+            if (input > 0.5f) jump = true; else jump = false;
+        }
+        public void OnRun(InputAction.CallbackContext context)
+        {
+            float input = context.ReadValue<float>();
+            if (input > 0.5f) run = true; else run = false;
+        }
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            movementInput = context.ReadValue<Vector2>();
+        }
+
         private void FixedUpdate()
         {
             MovePlayer();
         }
-        public void OnMove(InputAction.CallbackContext context)
+
+        private void MyInput()
         {
-            Vector2 movIn = context.ReadValue<Vector2>();
-            movementInput = movIn;
             horizontalInput = movementInput.x;
             verticalInput = movementInput.y;
-        }
-        public void OnJump(InputAction.CallbackContext context)
-        {
-            if (readyToJump)
+
+            if (jump && readyToJump && grounded)
             {
                 readyToJump = false;
+
                 Jump();
-                Invoke(nameof(ResetJump), jumpCooldown);
+
+                Invoke(nameof(ResetJump), jumpCooldown); 
             }
         }
 
@@ -162,12 +165,7 @@ namespace ronan.player
                     desiredMoveSpeed = sprintSpeed;
                 }
             }
-            else if (playerInputs.Player.Crouch.inProgress)
-            {
-                state = MovementState.crouching;
-                desiredMoveSpeed = crouchSpeed;
-            }
-            else if(grounded && playerInputs.Player.Sprint.inProgress)
+            else if(grounded && run)
             {
                 state = MovementState.sprinting;
                 desiredMoveSpeed = sprintSpeed;

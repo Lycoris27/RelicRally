@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ronan.player
 {
     public class PlayerOrientation : MonoBehaviour
     {
         [SerializeField] private Transform cameraObject;
-        private PlayerInputs pi;
+        private Vector2 rawMovementInput;
         private Vector2 desiredDir;
         Vector3 forward;
         Vector3 backward;
@@ -17,22 +18,13 @@ namespace ronan.player
         public float turnSmoothTime = 0.5f;
         float turnSmoothVelocity;
 
-        private void Awake()
+        public void OnMove(InputAction.CallbackContext context)
         {
-            pi = new PlayerInputs();
-        }
-        private void OnEnable()
-        {
-            pi.Enable();
-        }
-        private void OnDisable()
-        {
-            pi.Disable();
+            rawMovementInput = context.ReadValue<Vector2>();
         }
 
         private void FixedUpdate()
         {
-            Vector2 rawMovementInput = pi.Player.Movement.ReadValue<Vector2>();
             Vector3 direction = new Vector3(rawMovementInput.x, 0f, rawMovementInput.y).normalized;
 
             Vector3 tarForward = cameraObject.forward;
