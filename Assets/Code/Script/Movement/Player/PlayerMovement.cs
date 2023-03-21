@@ -72,7 +72,6 @@ namespace ronan.player
         {
             walking,
             sprinting,
-            wallrunning,
             climbing,
             sliding,
             air
@@ -98,6 +97,7 @@ namespace ronan.player
             MyInput();
             SpeedControl();
             StateHandler();
+            AnimatorStateHandler();
 
             if (grounded)
             {
@@ -127,6 +127,11 @@ namespace ronan.player
         private void FixedUpdate()
         {
             MovePlayer();
+        }
+
+        private void AnimatorStateHandler()
+        {
+
         }
 
         private void MyInput()
