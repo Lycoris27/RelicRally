@@ -267,6 +267,9 @@ MonoBehaviour:
     m_Bits: 64
   - serializedVersion: 2
     m_Bits: 128
+  cvc:
+  - {fileID: 711586761}
+  - {fileID: 634334166}
 --- !u!1 &330403353
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +781,7 @@ MonoBehaviour:
   m_RollDamping: 0
   m_AutoDolly:
     m_Enabled: 0
-    m_PositionOffset: 0
+    m_PositionOffset: -0.8
     m_SearchRadius: 2
     m_SearchResolution: 5
 --- !u!114 &1256562196
@@ -1108,7 +1111,7 @@ MonoBehaviour:
   m_RollDamping: 0
   m_AutoDolly:
     m_Enabled: 0
-    m_PositionOffset: 0
+    m_PositionOffset: -0.8
     m_SearchRadius: 2
     m_SearchResolution: 5
 --- !u!114 &1527058813
