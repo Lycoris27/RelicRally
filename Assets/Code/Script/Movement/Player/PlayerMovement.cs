@@ -49,8 +49,6 @@ namespace ronan.player
         private bool jump = false;
         private bool run = false;
 
-
-
         public Transform camOrientation;
         public Transform playerOrientation;
         public bool sliding;
@@ -64,8 +62,10 @@ namespace ronan.player
 
         Rigidbody rb;
         public PlayerInputs playerInputs;
+        public Animator anim;
         private InputActionAsset inputAsset;
         private InputActionMap player;
+
 
         public MovementState state;
         public enum MovementState
@@ -81,11 +81,13 @@ namespace ronan.player
         {
             rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true;
+            anim = GetComponentInChildren<Animator>();
+
 
             readyToJump = true;
             moveSpeed = walkSpeed;
 
-            startYScale = transform.localScale.y;
+    
         }
 
         private void Update()
@@ -131,7 +133,35 @@ namespace ronan.player
 
         private void AnimatorStateHandler()
         {
+            if (state == MovementState.climbing)
+            {
+                anim.SetBool("isClimbing", true);
+            } 
+            else anim.SetBool("isClimbing", false);
 
+            if (state == MovementState.sliding)
+            {
+                anim.SetBool("isSliding", true);
+            } 
+            else anim.SetBool("isSliding", false);
+            if (grounded)
+            {
+                anim.SetBool("grounded", true);
+
+                if (movementInput == Vector2.zero)
+                {
+                    anim.SetBool("isSprinting", false);
+                }
+                else anim.SetBool("isSprinting", true);
+            }
+            else anim.SetBool("grounded", false);
+
+
+            if (state == MovementState.air && rb.velocity.y <= -0.5)
+            {
+                anim.SetBool("falling", true);
+            }
+            else anim.SetBool("falling", false);
         }
 
         private void MyInput()
@@ -169,7 +199,9 @@ namespace ronan.player
                 {
                     desiredMoveSpeed = sprintSpeed;
                 }
+                
             }
+
             else if(grounded && run)
             {
                 state = MovementState.sprinting;
@@ -274,6 +306,8 @@ namespace ronan.player
         private void Jump()
         {
             exitingSlope = true;
+
+            anim.SetTrigger("Jump");
 
             rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
