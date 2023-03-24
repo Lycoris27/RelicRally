@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PressurePlateManager : MonoBehaviour
 {
-    [System.Serializable] public class Plate {
+    [System.Serializable]
+    public class Plate
+    {
         [SerializeField] public GameObject plateGO;
-        [SerializeField]  public int id;
+        [SerializeField] public int id;
         [SerializeField] public bool triggered = false;
     }
 
@@ -15,24 +17,25 @@ public class PressurePlateManager : MonoBehaviour
     public List<int> currentSequence;
     public GameObject wallGO;
 
-     public void AddTriggeredPlate(int id)
+    public void AddTriggeredPlate(int id)
     {
-        if (plates[id-1].triggered != true)
+        if (plates[id - 1].triggered != true)
         {
-            plates[id-1].triggered=true;
-            currentSequence.Add (id);
+            plates[id - 1].triggered = true;
+            currentSequence.Add(id);
+            plates[id - 1].plateGO.transform.Translate(0, -0.08f, 0);
         }
         CheckPlateTriggering();
     }
 
-    private void CheckPlateTriggering ()
+    private void CheckPlateTriggering()
     {
         if (currentSequence.Count != targetSequence.Count)
         {
             return;
         }
 
-        Debug.Log ("Checking triggering!");
+        Debug.Log("Checking triggering!");
 
         // compare the array of currentSequence against targetSequence
         bool inSequence = true;
@@ -44,31 +47,31 @@ public class PressurePlateManager : MonoBehaviour
             {
                 inSequence = false;
             }
-            else 
+            else
             {
-                 n++;
+                n++;
             }
         }
 
         // if array is the same, call wall game object to trigger animation or disappear
+        // TODO swap this code for triggering the animation on the WallGO
         if (inSequence)
         {
-            Debug.Log ("Plate sequence triggered!");
-            // TODO swap this code for triggering the animation on the WallGO
+            Debug.Log("Plate sequence triggered!");
             Destroy(wallGO);
         }
         else
         {
-            Debug.Log ("Plate sequence not triggered!");
+            Debug.Log("Plate sequence not triggered!");
             currentSequence = new List<int>();
             foreach (Plate p in plates)
             {
                 p.triggered = false;
+                p.plateGO.transform.Translate(0, 0.08f, 0);
             }
         }
     }
 }
-
 
 
 
