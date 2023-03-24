@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 [RequireComponent(typeof(Rigidbody))]
 public class MitchPlayerMovement : MonoBehaviour
 {
-    public PlayerInputs controls;
+    public PlayerInputMap controls;
     [SerializeField] private bool AllowJumping;
-    [SerializeField] private bool isJumpingRestricted;
     [SerializeField] private float moveSpeed;
+    [SerializeField] private float turnSpeed;
     [SerializeField] private float jumpHeight;
+
     private float desiredKBInputH;
     private float desiredKBInputV;
+    private float desiredKBInputT;
     private float desiredKBInputJ;
-    private Rigidbody gameObj;
-    private float mass;
     private bool isInAir = false;
+    private Rigidbody rb;
 
     private void OnEnable()
     {
@@ -30,69 +32,67 @@ public class MitchPlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        controls = new PlayerInputs();
-        gameObj = this.gameObject.GetComponent<Rigidbody>();
+        controls = new PlayerInputMap();
+        rb = this.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        PlayerCharacterMovement();
+
         if (AllowJumping)
         {
-            if (!isInAir && isJumpingRestricted || !isJumpingRestricted)
+            if (!isInAir)
             {
                 Jumping();
             }
         }
     }
 
-    void VerticalMovement()
+    void PlayerCharacterMovement()
     {
-        desiredKBInputH = (controls.StandardMovement.HorizMove.ReadValue<float>()); // Go to the StandardMoivement action map and read the HorizMove Vector3 of that mapping.
-
-        if (desiredKBInputH == 1) // If the key that is pressed is the positive binding
-        {
-            gameObj.velocity = transform.up * moveSpeed; // Create new Vector 3 for moving up.
-        }
-        else if (desiredKBInputH == -1) // If the key that is pressed is the negative binding
-        {
-            gameObj.velocity = -transform.up * moveSpeed;
-        }
-        else // If neither the positive or negative bindings are being detected
-        {
-            gameObj.velocity = Vector3.Scale((gameObj.velocity), new Vector3(1, 0, 1));
-        }
-    }
-
-    void HorizontalMovement()
-    {
-        desiredKBInputV = (controls.StandardMovement.VertMove.ReadValue<float>()); // Go to the StandardMoivement action map and read the VertMove Vector3 of that mapping.
+        desiredKBInputV = (controls.TestMovement.VertMove.ReadValue<float>()); // Go to the StandardMovement action map and read the HorizMove Vector3 of that mapping.
 
         if (desiredKBInputV == 1) // If the key that is pressed is the positive binding
         {
-            gameObj.velocity = transform.right * moveSpeed;
+            this.transform.position += this.transform.forward * moveSpeed * Time.deltaTime;
         }
         else if (desiredKBInputV == -1) // If the key that is pressed is the negative binding
         {
-            gameObj.velocity = -transform.right * moveSpeed;
+            this.transform.position -= this.transform.forward * moveSpeed * Time.deltaTime;
         }
-        else // If neither the positive or negative bindings are being detected
+
+        desiredKBInputH = (controls.TestMovement.HorizMove.ReadValue<float>()); // Go to the StandardMoivement action map and read the VertMove Vector3 of that mapping.
+
+        if (desiredKBInputH == 1) // If the key that is pressed is the positive binding
         {
-            gameObj.velocity = Vector3.Scale((gameObj.velocity), new Vector3(0, 1, 1));
+            this.transform.position += this.transform.right * moveSpeed * Time.deltaTime;
+        }
+        else if (desiredKBInputH == -1) // If the key that is pressed is the negative binding
+        {
+            this.transform.position -= this.transform.right * moveSpeed * Time.deltaTime;
+        }
+
+        desiredKBInputT = (controls.TestMovement.Turn.ReadValue<float>());
+
+        if (desiredKBInputT == 1)
+        {
+            this.transform.RotateAround(this.transform.position, Vector3.up, turnSpeed * Time.deltaTime);
+        }
+        else if (desiredKBInputT == -1)
+        {
+            this.transform.RotateAround(this.transform.position, Vector3.up, -turnSpeed * Time.deltaTime);
         }
     }
 
     void Jumping()
     {
-        desiredKBInputJ = (controls.StandardMovement.Jump.ReadValue<float>()); // Go to the StandardMoivement action map and read the HorizMove Vector3 of that mapping.
+        desiredKBInputJ = (controls.TestMovement.Jump.ReadValue<float>()); // Go to the StandardMoivement action map and read the HorizMove Vector3 of that mapping.
 
-        if (desiredKBInputJ == 1 && (gameObj.velocity.y) < 0.001f) // If the key that is pressed is the 
+        if (desiredKBInputJ == 1 && Mathf.Abs(rb.velocity.y) < 0.01f) 
         {
-            gameObj.velocity += Vector3.up * jumpHeight;
-            if (isJumpingRestricted)
-            {
-                isInAir = true;
-            }
+            rb.velocity += Vector3.up * (this.jumpHeight);
         }
     }
 }
