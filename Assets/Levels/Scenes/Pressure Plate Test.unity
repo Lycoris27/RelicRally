@@ -953,10 +953,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AllowJumping: 1
-  moveSpeed: 2
+  moveSpeed: 5
   turnSpeed: 65
-  jumpHeight: 3
-  testVar: 0
+  jumpHeight: 5
 --- !u!1 &1562580485 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2902159350187548511, guid: e382e13c23f01fb4cb8a7e4ec1d9cc77,

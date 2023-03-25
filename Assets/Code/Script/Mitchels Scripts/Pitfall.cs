@@ -11,6 +11,7 @@ public class Pitfall : MonoBehaviour
     public GameObject spawner;
     [Tooltip("Specify the offset on the Y axis from the spawner location. Example: the Super Duper Blox Man prefab requires an offset of 1.")]
     public float spawnOffset;
+    [Tooltip("Specify the delay in seconds until the player is translated to the spawner location.")]
     [SerializeField] private float respawnDelay;
 
 
@@ -21,8 +22,6 @@ public class Pitfall : MonoBehaviour
             Debug.Log("Trigger activated!");
             //other.gameObject.transform.position = new Vector3(-2f,6.1f,10.961f); // Transform player back to a specific point in space (TO BE CHANGED)
             // TODO see if player height is needed for y offset
-            other.gameObject.transform.position = spawner.transform.position;
-            other.gameObject.transform.Translate(0, spawnOffset, 0);
 
             StartCoroutine(DelayRespawn());
         }
@@ -31,6 +30,7 @@ public class Pitfall : MonoBehaviour
     IEnumerator DelayRespawn()
     {
         yield return new WaitForSeconds(respawnDelay);
-        // TODO Insert code for respawning player here
+        mitchPlayerMovement.gameObject.transform.position = spawner.transform.position;
+        mitchPlayerMovement.gameObject.transform.Translate(0, spawnOffset, 0);
     }
 }

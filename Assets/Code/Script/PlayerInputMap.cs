@@ -195,7 +195,7 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""0bf36bdb-f87f-46b5-8c77-61e0a39d9da2"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -206,7 +206,7 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""00c80b9c-6f3a-4eca-a2ee-b7b7cb53800f"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -272,7 +272,7 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""dfdaa603-442f-4c21-b519-ab83ac2043f0"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -283,7 +283,7 @@ public partial class @PlayerInputMap : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""e3d3d0e1-cc6d-4852-b387-2ac46b78874d"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

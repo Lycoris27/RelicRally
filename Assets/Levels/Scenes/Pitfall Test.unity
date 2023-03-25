@@ -309,6 +309,7 @@ MonoBehaviour:
   mitchPlayerMovement: {fileID: 2052000919}
   spawner: {fileID: 1041819945}
   spawnOffset: 1
+  respawnDelay: 1
 --- !u!1 &579771104
 GameObject:
   m_ObjectHideFlags: 0
