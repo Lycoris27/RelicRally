@@ -510,7 +510,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422667584}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
@@ -2535,8 +2535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dart: {fileID: 422667584}
-  initialDelay: 1
-  delay: 1
+  initialDelay: 4
+  delay: 2
   dartSpeed: 1.65
   endWallDistance: 6
 --- !u!1 &1690836840

@@ -47,7 +47,7 @@ public class DartLauncher : MonoBehaviour
             dart.transform.position = new Vector3(initialPosition, dart.transform.position.y, dart.transform.position.z);
             timeElapsed = 0;
         }
-        Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed);
+        Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
         dart.transform.position = new Vector3(initialPosition + valueToLerp, dart.transform.position.y, dart.transform.position.z);
     }
 }
