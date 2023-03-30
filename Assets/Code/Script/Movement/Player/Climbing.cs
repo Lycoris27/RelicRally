@@ -97,8 +97,11 @@ namespace ronan.player
         {
             if (wallFront && !climbing && climbTimer == 0)
             {
-                Vector3 forceToApply = new Vector3(0, -0.2f, 0);
-                rb.AddForce(forceToApply, ForceMode.Impulse);
+                if (rb.velocity.y >= -5)
+                {
+                    Vector3 forceToApply = new Vector3(0, -0.2f, 0);
+                    rb.AddForce(forceToApply, ForceMode.Impulse);
+                }
             } else
 
             if (wallFront && pi.Player.Jump.IsInProgress() && wallLookAngle < maxWallLookAngle && !exitingWall)
