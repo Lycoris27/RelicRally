@@ -9,7 +9,8 @@ public class DartLauncher : MonoBehaviour
 
     [Header("Parameters")]
     [SerializeField] private float initialDelay;
-    [SerializeField] private float delay;
+    [Tooltip("The delay before the dart is reset.")]
+    [SerializeField] private float restartDelay;
     [Range(1,10)]
     [SerializeField] private float dartSpeed;
     [SerializeField] private float endWallDistance;
@@ -20,6 +21,7 @@ public class DartLauncher : MonoBehaviour
     private float endValue;
     private float valueToLerp;
     private float initialPosition;
+    [HideInInspector] public bool dartHit;
 
     void Start()
     {
@@ -31,6 +33,17 @@ public class DartLauncher : MonoBehaviour
     void Update()
     {
         StartCoroutine(DelayBeforeExecute());
+
+        if (dartHit == true)
+        {
+            Debug.Log("Effect goes here.");
+            // TODO Add a short slowdown effect once the new player controller replaces Super Duper Blox Man.
+            dartHit = false;
+        }
+        else
+        {
+            return;
+        }
     }
 
     IEnumerator DelayBeforeExecute()
@@ -43,11 +56,11 @@ public class DartLauncher : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(restartDelay);
             dart.transform.position = new Vector3(initialPosition, dart.transform.position.y, dart.transform.position.z);
             timeElapsed = 0;
         }
-        Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
+        //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
         dart.transform.position = new Vector3(initialPosition + valueToLerp, dart.transform.position.y, dart.transform.position.z);
     }
 }
