@@ -53,6 +53,8 @@ namespace ronan.player
         public float exitWallTime = 0.2f;
         private float exitWallTimer;
 
+        private GameObject body;
+
         Vector2 movementInput;
 
 
@@ -60,6 +62,7 @@ namespace ronan.player
         {
             pi = new PlayerInputs();
             pm = GetComponent<PlayerMovement>();
+            body = GameObject.FindObjectOfType<Animator>().gameObject;
         }
         private void OnEnable()
         {
@@ -78,12 +81,18 @@ namespace ronan.player
             StateMachine();
 
             if (climbing && !exitingWall) ClimbingMovement();
-            //if (wallFront && !climbing && climbTimer < maxClimbTime && climbTimer > 0) rb.velocity = new Vector3(rb.velocity.x, -4, rb.velocity.z);
+            
         }
         private void WallCheck()
         {
-            wallFront = Physics.SphereCast(transform.position, sphereCastRadius, playerOrientation.forward, out frontWallHit, detectionLength, whatIsWall);
+            Vector3 foot = transform.position;
+            foot.y -= 0.6f;
+
+            wallFront = Physics.SphereCast(foot, sphereCastRadius, playerOrientation.forward, out frontWallHit, detectionLength, whatIsWall);
             wallLookAngle = Vector2.Angle(playerOrientation.forward, -frontWallHit.normal);
+            Debug.DrawRay(transform.position, playerOrientation.forward, Color.green);
+
+
 
             bool newWall = frontWallHit.transform != lastWall || Mathf.Abs(Vector3.Angle(lastWallNormal, frontWallHit.normal)) > minWallNormalAngleChange;
 
@@ -104,13 +113,15 @@ namespace ronan.player
                 }
             } else
 
-            if (wallFront && pi.Player.Jump.IsInProgress() && wallLookAngle < maxWallLookAngle && !exitingWall)
+            if (wallFront && wallLookAngle < maxWallLookAngle && !exitingWall)
             {
                 if (!climbing && climbTimer > 0) StartClimbing();
+
 
                 if (climbTimer > 0) climbTimer -= Time.deltaTime;
                 if (climbTimer < 0) StopClimbing();
             } 
+
 
             else if (exitingWall)
             {
@@ -124,8 +135,6 @@ namespace ronan.player
             {
                 if (climbing) StopClimbing();
             }
-
-            if (wallFront && pi.Player.Jump.IsPressed() && climbJumpsLeft > 0) ClimbJump();
         }
         private void StartClimbing()
         {
@@ -137,27 +146,16 @@ namespace ronan.player
         }
         private void ClimbingMovement()
         {
-            rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
+            rb.velocity = new Vector3(0, climbSpeed, 0);
+            body.transform.rotation = Quaternion.LookRotation(-frontWallHit.normal);
         }
         private void StopClimbing()
         {
             climbing = false;
             pm.climbing = false;
+            //rb.velocity = new Vector3(0, climbSpeed*1.5f, 0);
 
             climbTimer = 0f;
-        }
-
-        private void ClimbJump()
-        {
-            exitingWall = true;
-            exitWallTimer = exitWallTime;
-
-            Vector3 forceToApply = transform.up * climbJumpUpForce + frontWallHit.normal * climbJumpBackForce;
-
-            rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
-            rb.AddForce(forceToApply, ForceMode.Impulse);
-
-            climbJumpsLeft--;
         }
 
     }

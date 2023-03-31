@@ -146,7 +146,7 @@ namespace ronan.player
             else anim.SetBool("isSliding", false);
             if (grounded)
             {
-                anim.SetBool("grounded", true);
+                anim.SetBool("isGrounded", true);
 
                 if (movementInput == Vector2.zero)
                 {
@@ -154,14 +154,19 @@ namespace ronan.player
                 }
                 else anim.SetBool("isSprinting", true);
             }
-            else anim.SetBool("grounded", false);
+            else anim.SetBool("isGrounded", false);
 
 
-            if (state == MovementState.air && rb.velocity.y <= -0.5)
+            if (state == MovementState.air && rb.velocity.y <= -0.1)
             {
-                anim.SetBool("falling", true);
+                anim.SetBool("isFalling", true);
             }
-            else anim.SetBool("falling", false);
+            else anim.SetBool("isFalling", false);
+
+            if (OnSlope())
+            {
+                anim.SetBool("onSlope", true);
+            } else anim.SetBool("onSlope", false);
         }
 
         private void MyInput()
@@ -185,6 +190,7 @@ namespace ronan.player
             {
                 state = MovementState.climbing;
                 desiredMoveSpeed = climbSpeed;
+                return;
             }
 
             else if (sliding)
