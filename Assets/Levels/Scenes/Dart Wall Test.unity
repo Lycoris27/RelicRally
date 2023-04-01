@@ -123,103 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &35271896
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 35271900}
-  - component: {fileID: 35271899}
-  - component: {fileID: 35271898}
-  - component: {fileID: 35271897}
-  m_Layer: 0
-  m_Name: Cube (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &35271897
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35271896}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &35271898
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35271896}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: f0dc0a662c2300b46a60881be16f0106, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &35271899
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35271896}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &35271900
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35271896}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.176, y: 0.4, z: 5.5559998}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &45531090
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +300,7 @@ GameObject:
   - component: {fileID: 148797065}
   - component: {fileID: 148797064}
   m_Layer: 0
-  m_Name: Cylinder (8)
+  m_Name: gdart_dartReceiver2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,12 +364,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148797063}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 2.2809954, z: 7.8500004}
+  m_LocalPosition: {x: 15.135766, y: 8.384808, z: -11.8219795}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &160370543
 GameObject:
@@ -480,7 +383,7 @@ GameObject:
   - component: {fileID: 160370545}
   - component: {fileID: 160370544}
   m_Layer: 0
-  m_Name: Cylinder (11)
+  m_Name: gdart_dartReceiver5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,12 +447,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160370543}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 1.3509955, z: 9.65}
+  m_LocalPosition: {x: 15.135766, y: 7.4548073, z: -10.02198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &240756867
 GameObject:
@@ -565,7 +468,7 @@ GameObject:
   - component: {fileID: 240756868}
   - component: {fileID: 240756872}
   m_Layer: 0
-  m_Name: Capsule (4)
+  m_Name: gdart_dart6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -643,12 +546,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240756867}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 2.2809954, z: 10.25}
+  m_LocalPosition: {x: 9.559767, y: 8.384808, z: -9.42198}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &240756872
 MonoBehaviour:
@@ -677,7 +580,7 @@ GameObject:
   - component: {fileID: 422667585}
   - component: {fileID: 422667589}
   m_Layer: 0
-  m_Name: Capsule (1)
+  m_Name: gdart_dart1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -755,12 +658,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422667584}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 1.3389956, z: 7.25}
+  m_LocalPosition: {x: 9.559767, y: 7.442807, z: -12.42198}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &422667589
 MonoBehaviour:
@@ -789,7 +692,7 @@ GameObject:
   - component: {fileID: 570278794}
   - component: {fileID: 570278798}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: gdart_dartLauncher3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -867,12 +770,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570278793}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 1.3389956, z: 8.45}
+  m_LocalPosition: {x: 9.895766, y: 7.442807, z: -11.22198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &570278798
 MonoBehaviour:
@@ -1104,7 +1007,7 @@ GameObject:
   - component: {fileID: 643160963}
   - component: {fileID: 643160962}
   m_Layer: 0
-  m_Name: Cylinder (13)
+  m_Name: gdart_dartReceiver7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,12 +1071,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643160961}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 1.3509955, z: 10.85}
+  m_LocalPosition: {x: 15.135766, y: 7.4548073, z: -8.8219795}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &657733425
 GameObject:
@@ -1189,7 +1092,7 @@ GameObject:
   - component: {fileID: 657733426}
   - component: {fileID: 657733430}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: gdart_dartLauncher4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1267,12 +1170,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657733425}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 2.2809954, z: 9.05}
+  m_LocalPosition: {x: 9.895766, y: 8.384808, z: -10.62198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &657733430
 MonoBehaviour:
@@ -1306,7 +1209,7 @@ GameObject:
   - component: {fileID: 702493364}
   - component: {fileID: 702493368}
   m_Layer: 0
-  m_Name: Cylinder (6)
+  m_Name: gdart_dartLauncher7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,12 +1287,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702493363}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 1.3509955, z: 10.85}
+  m_LocalPosition: {x: 9.895766, y: 7.4548073, z: -8.8219795}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &702493368
 MonoBehaviour:
@@ -1524,6 +1427,65 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1 &737727903
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737727904}
+  m_Layer: 0
+  m_Name: greybox_chi_haz_dartLauncherTrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737727904
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737727903}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.607766, y: -6.1038117, z: 19.67198}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1159690808}
+  - {fileID: 1690836844}
+  - {fileID: 1030348256}
+  - {fileID: 1445155323}
+  - {fileID: 1759804353}
+  - {fileID: 1690401006}
+  - {fileID: 740172463}
+  - {fileID: 570278797}
+  - {fileID: 657733429}
+  - {fileID: 1951897614}
+  - {fileID: 1972175013}
+  - {fileID: 702493367}
+  - {fileID: 1709399214}
+  - {fileID: 422667588}
+  - {fileID: 1244593308}
+  - {fileID: 1300754470}
+  - {fileID: 240756871}
+  - {fileID: 777570989}
+  - {fileID: 1323572030}
+  - {fileID: 1276202358}
+  - {fileID: 790178074}
+  - {fileID: 2044454023}
+  - {fileID: 148797066}
+  - {fileID: 1711829108}
+  - {fileID: 1846097893}
+  - {fileID: 160370546}
+  - {fileID: 786962952}
+  - {fileID: 643160964}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740172459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,7 +1500,7 @@ GameObject:
   - component: {fileID: 740172460}
   - component: {fileID: 740172464}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: gdart_dartLauncher2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1616,12 +1578,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 740172459}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 2.2809954, z: 7.8500004}
+  m_LocalPosition: {x: 9.895766, y: 8.384808, z: -11.8219795}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &740172464
 MonoBehaviour:
@@ -1688,7 +1650,7 @@ GameObject:
   - component: {fileID: 777570986}
   - component: {fileID: 777570990}
   m_Layer: 0
-  m_Name: Capsule (5)
+  m_Name: gdart_dart5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,12 +1728,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777570985}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 1.3389956, z: 9.65}
+  m_LocalPosition: {x: 9.559767, y: 7.442807, z: -10.02198}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &777570990
 MonoBehaviour:
@@ -1798,7 +1760,7 @@ GameObject:
   - component: {fileID: 786962951}
   - component: {fileID: 786962950}
   m_Layer: 0
-  m_Name: Cylinder (12)
+  m_Name: gdart_dartReceiver6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1862,12 +1824,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786962949}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 2.2809954, z: 10.25}
+  m_LocalPosition: {x: 15.135766, y: 8.384808, z: -9.42198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &790178070
 GameObject:
@@ -1882,7 +1844,7 @@ GameObject:
   - component: {fileID: 790178072}
   - component: {fileID: 790178071}
   m_Layer: 0
-  m_Name: Cube (7)
+  m_Name: gdart_endRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1959,12 +1921,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790178070}
   m_LocalRotation: {x: -0.00000024959445, y: 0.9961947, z: 0.08715583, w: 0.0000028014183}
-  m_LocalPosition: {x: -2.176, y: 0.125, z: 14.532}
-  m_LocalScale: {x: 1, y: 0.1, z: 2}
+  m_LocalPosition: {x: 12.4317665, y: 6.2288117, z: -5.1399803}
+  m_LocalScale: {x: 1, y: 0.10000001, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: -10, y: 180, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -2088,7 +2050,7 @@ GameObject:
   - component: {fileID: 1030348254}
   - component: {fileID: 1030348253}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: gdart_launcherWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2165,12 +2127,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030348252}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.717, y: 1.7979956, z: 9.056}
+  m_LocalPosition: {x: 9.890766, y: 7.9018073, z: -10.61598}
   m_LocalScale: {x: 3, y: 0.2, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1159690804
 GameObject:
@@ -2185,7 +2147,7 @@ GameObject:
   - component: {fileID: 1159690806}
   - component: {fileID: 1159690805}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: gdart_startRamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2261,13 +2223,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159690804}
-  m_LocalRotation: {x: -0.08715578, y: 0, z: 0, w: 0.9961947}
-  m_LocalPosition: {x: -2.176, y: 0.125, z: 3.58}
-  m_LocalScale: {x: 1, y: 0.1, z: 2}
+  m_LocalRotation: {x: -0.08715578, y: -0, z: -0, w: 0.9961947}
+  m_LocalPosition: {x: 12.4317665, y: 6.2288117, z: -16.09198}
+  m_LocalScale: {x: 1, y: 0.10000002, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -10, y: 0, z: 0}
 --- !u!1 &1244593304
 GameObject:
@@ -2283,7 +2245,7 @@ GameObject:
   - component: {fileID: 1244593305}
   - component: {fileID: 1244593309}
   m_Layer: 0
-  m_Name: Capsule (2)
+  m_Name: gdart_dart3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,12 +2323,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244593304}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 1.3389956, z: 8.45}
+  m_LocalPosition: {x: 9.559767, y: 7.442807, z: -11.22198}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1244593309
 MonoBehaviour:
@@ -2394,7 +2356,7 @@ GameObject:
   - component: {fileID: 1276202356}
   - component: {fileID: 1276202355}
   m_Layer: 0
-  m_Name: Cube (6)
+  m_Name: gdart_receiverWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2471,12 +2433,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276202354}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.533, y: 1.798011, z: 9.056}
+  m_LocalPosition: {x: 15.140766, y: 7.9018226, z: -10.61598}
   m_LocalScale: {x: 3, y: 0.2, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1300754466
 GameObject:
@@ -2492,7 +2454,7 @@ GameObject:
   - component: {fileID: 1300754467}
   - component: {fileID: 1300754471}
   m_Layer: 0
-  m_Name: Capsule (3)
+  m_Name: gdart_dart4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2570,12 +2532,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300754466}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 2.2809954, z: 9.05}
+  m_LocalPosition: {x: 9.559767, y: 8.384808, z: -10.62198}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1300754471
 MonoBehaviour:
@@ -2604,7 +2566,7 @@ GameObject:
   - component: {fileID: 1323572027}
   - component: {fileID: 1323572031}
   m_Layer: 0
-  m_Name: Capsule (6)
+  m_Name: gdart_dart7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2682,12 +2644,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323572026}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 1.3389956, z: 10.85}
+  m_LocalPosition: {x: 9.559767, y: 7.442807, z: -8.8219795}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1323572031
 MonoBehaviour:
@@ -2855,7 +2817,7 @@ GameObject:
   - component: {fileID: 1445155321}
   - component: {fileID: 1445155320}
   m_Layer: 0
-  m_Name: Cube (3)
+  m_Name: gdart_startOfCatwalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2931,13 +2893,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445155319}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.176, y: 0.298, z: 5.5559998}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.4317665, y: 6.4018116, z: -14.11598}
   m_LocalScale: {x: 2, y: 0.1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1501925481
 GameObject:
@@ -3026,7 +2988,7 @@ GameObject:
   - component: {fileID: 1690401003}
   - component: {fileID: 1690401007}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: gdart_dartLauncher1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3104,12 +3066,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690401002}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 1.3389956, z: 7.2500005}
+  m_LocalPosition: {x: 9.895766, y: 7.442808, z: -12.42198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1690401007
 MonoBehaviour:
@@ -3142,7 +3104,7 @@ GameObject:
   - component: {fileID: 1690836842}
   - component: {fileID: 1690836841}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: gdart_catwalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3218,13 +3180,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690836840}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.176, y: 0.298, z: 9.056}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.4317665, y: 6.4018116, z: -10.61598}
   m_LocalScale: {x: 2, y: 0.1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1709399210
 GameObject:
@@ -3240,7 +3202,7 @@ GameObject:
   - component: {fileID: 1709399211}
   - component: {fileID: 1709399215}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: gdart_dart2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3318,12 +3280,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709399210}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -5.048, y: 2.2809954, z: 7.85}
+  m_LocalPosition: {x: 9.559767, y: 8.384808, z: -11.8219795}
   m_LocalScale: {x: 0.1, y: 0.2, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1709399215
 MonoBehaviour:
@@ -3350,7 +3312,7 @@ GameObject:
   - component: {fileID: 1711829107}
   - component: {fileID: 1711829106}
   m_Layer: 0
-  m_Name: Cylinder (9)
+  m_Name: gdart_dartReceiver3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3414,12 +3376,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711829105}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 1.3389956, z: 8.45}
+  m_LocalPosition: {x: 15.135766, y: 7.442807, z: -11.22198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1759804349
 GameObject:
@@ -3434,7 +3396,7 @@ GameObject:
   - component: {fileID: 1759804351}
   - component: {fileID: 1759804350}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: gdart_endOfCatwalk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3510,13 +3472,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759804349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.176, y: 0.298, z: 12.556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.4317665, y: 6.4018116, z: -7.11598}
   m_LocalScale: {x: 2, y: 0.1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1846097890
 GameObject:
@@ -3530,7 +3492,7 @@ GameObject:
   - component: {fileID: 1846097892}
   - component: {fileID: 1846097891}
   m_Layer: 0
-  m_Name: Cylinder (10)
+  m_Name: gdart_dartReceiver4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3594,12 +3556,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846097890}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 2.2809954, z: 9.05}
+  m_LocalPosition: {x: 15.135766, y: 8.384808, z: -10.62198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &1951897610
 GameObject:
@@ -3615,7 +3577,7 @@ GameObject:
   - component: {fileID: 1951897611}
   - component: {fileID: 1951897615}
   m_Layer: 0
-  m_Name: Cylinder (4)
+  m_Name: gdart_dartLauncher5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3693,12 +3655,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951897610}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 1.3509955, z: 9.65}
+  m_LocalPosition: {x: 9.895766, y: 7.4548073, z: -10.02198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1951897615
 MonoBehaviour:
@@ -3732,7 +3694,7 @@ GameObject:
   - component: {fileID: 1972175010}
   - component: {fileID: 1972175014}
   m_Layer: 0
-  m_Name: Cylinder (5)
+  m_Name: gdart_dartLauncher6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3810,12 +3772,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972175009}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -4.712, y: 2.2809954, z: 10.25}
+  m_LocalPosition: {x: 9.895766, y: 8.384808, z: -9.42198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!114 &1972175014
 MonoBehaviour:
@@ -3847,7 +3809,7 @@ GameObject:
   - component: {fileID: 2044454022}
   - component: {fileID: 2044454021}
   m_Layer: 0
-  m_Name: Cylinder (7)
+  m_Name: gdart_dartReceiver1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3911,12 +3873,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044454020}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: 0.528, y: 1.3389956, z: 7.2500005}
+  m_LocalPosition: {x: 15.135766, y: 7.442807, z: -12.42198}
   m_LocalScale: {x: 0.4, y: 0.1, z: 0.4}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 737727904}
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1001 &3198576007646084674
 PrefabInstance:
@@ -3987,3 +3949,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fe3c25e900368e45933eeb32381cc48, type: 3}
+--- !u!1001 &9042250787322642096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9042250786911322058, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_Name
+      value: chi_haz_dartLauncherTrap
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.637303
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9042250786911322059, guid: 9919fc3637dbcb24d80433645f513245,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9919fc3637dbcb24d80433645f513245, type: 3}
