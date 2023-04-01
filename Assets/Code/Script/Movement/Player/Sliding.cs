@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 namespace ronan.player {
     public class Sliding : MonoBehaviour
@@ -14,52 +15,51 @@ namespace ronan.player {
         private Rigidbody rb;
         private PlayerMovement pm;
         private PlayerInputs pi;
+        private CapsuleCollider capCol;
 
         [Header("Sliding")]
         public float maxSlideTime = 0.75f;
         public float slideForce = 300;
-        private float slideTimer;
+        [SerializeField] private float slideTimer;
+        private float maxSlideCooldown = 0.5f;
+        private float slideCooldown;
 
         public float slideYScale = 0.5f;
         private float startYScale;
 
+
+        bool slide = false;
         Vector2 movementInput;
 
-
-        private void Awake()
-        {
-            pi = new PlayerInputs();
-        }
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
             pm = GetComponent<PlayerMovement>();
+            capCol = GetComponent<CapsuleCollider>();
 
-            startYScale = playerObj.localScale.y;
+            startYScale = capCol.height;
+        }
 
-        }
-        private void OnEnable()
+        public void OnSlide(InputAction.CallbackContext context)
         {
-            pi.Enable();
+            float input = context.ReadValue<float>();
+            if (input > 0.5f) slide = true; else slide = false;
         }
-        private void OnDisable()
+        public void OnMove(InputAction.CallbackContext context)
         {
-            pi.Disable();
+            movementInput = context.ReadValue<Vector2>();
         }
 
         private void Update()
         {
-            Vector2 movIn = pi.Player.Movement.ReadValue<Vector2>();
-            movementInput = movIn;
-
-            if (pi.Player.Slide.WasPressedThisFrame() && movementInput != Vector2.zero)
+            if (slideCooldown <= 0 && slide && !pm.sliding && movementInput != Vector2.zero)
             {
                 StartSlide();
             }
 
-            if (pi.Player.Slide.WasReleasedThisFrame() && pm.sliding)
+            if (slideCooldown > 0)
             {
-                StopSlide();
+                slideCooldown -= Time.deltaTime;
             }
         }
 
@@ -73,10 +73,12 @@ namespace ronan.player {
         {
             pm.sliding = true;
 
-            playerObj.localScale = new Vector3(playerObj.localScale.x, slideYScale, playerObj.localScale.z);
             rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
 
             slideTimer = maxSlideTime;
+
+            capCol.height = slideYScale;
+            capCol.center = new Vector3(0, -0.5f,0);
         }
 
         private void SlidingMovement()
@@ -105,8 +107,9 @@ namespace ronan.player {
         private void StopSlide()
         {
             pm.sliding = false;
-
-            playerObj.localScale = new Vector3(playerObj.localScale.x, startYScale, playerObj.localScale.z);
+            slideCooldown = maxSlideTime;
+            capCol.height = startYScale;
+            capCol.center = Vector3.zero;
         }
     }
 }

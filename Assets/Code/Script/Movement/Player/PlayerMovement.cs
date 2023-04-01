@@ -45,7 +45,9 @@ namespace ronan.player
         private RaycastHit slopeHit;
         private bool exitingSlope;
 
-
+        //Input action context
+        private bool jump = false;
+        private bool run = false;
 
         public Transform camOrientation;
         public Transform playerOrientation;
@@ -60,54 +62,44 @@ namespace ronan.player
 
         Rigidbody rb;
         public PlayerInputs playerInputs;
+        public Animator anim;
+        private InputActionAsset inputAsset;
+        private InputActionMap player;
+
 
         public MovementState state;
         public enum MovementState
         {
             walking,
             sprinting,
-            wallrunning,
             climbing,
-            crouching,
             sliding,
             air
         }
 
-        private void Awake()
-        {
-            playerInputs = new PlayerInputs();
-        }
         private void Start()
         {
             rb = GetComponent<Rigidbody>();
             rb.freezeRotation = true;
+            anim = GetComponentInChildren<Animator>();
+
 
             readyToJump = true;
             moveSpeed = walkSpeed;
 
-            startYScale = transform.localScale.y;
-        }
-
-        private void OnEnable()
-        {
-            playerInputs.Enable();
-        }
-        private void OnDisable()
-        {
-            playerInputs.Disable();
+    
         }
 
         private void Update()
         {        
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-
-
             onSlide = OnSlope();
 
             MyInput();
             SpeedControl();
             StateHandler();
+            AnimatorStateHandler();
 
             if (grounded)
             {
@@ -119,37 +111,77 @@ namespace ronan.player
 
         }
 
+        public void OnJump(InputAction.CallbackContext context)
+        {
+            float input  = context.ReadValue<float>();
+            if (input > 0.5f) jump = true; else jump = false;
+        }
+        public void OnRun(InputAction.CallbackContext context)
+        {
+            float input = context.ReadValue<float>();
+            if (input > 0.5f) run = true; else run = false;
+        }
+        public void OnMove(InputAction.CallbackContext context)
+        {
+            movementInput = context.ReadValue<Vector2>();
+        }
+
         private void FixedUpdate()
         {
             MovePlayer();
         }
 
+        private void AnimatorStateHandler()
+        {
+            if (state == MovementState.climbing)
+            {
+                anim.SetBool("isClimbing", true);
+            } 
+            else anim.SetBool("isClimbing", false);
+
+            if (state == MovementState.sliding)
+            {
+                anim.SetBool("isSliding", true);
+            } 
+            else anim.SetBool("isSliding", false);
+            if (grounded)
+            {
+                anim.SetBool("isGrounded", true);
+
+                if (movementInput == Vector2.zero)
+                {
+                    anim.SetBool("isSprinting", false);
+                }
+                else anim.SetBool("isSprinting", true);
+            }
+            else anim.SetBool("isGrounded", false);
+
+
+            if (state == MovementState.air && rb.velocity.y <= -0.1)
+            {
+                anim.SetBool("isFalling", true);
+            }
+            else anim.SetBool("isFalling", false);
+
+            if (OnSlope())
+            {
+                anim.SetBool("onSlope", true);
+            } else anim.SetBool("onSlope", false);
+        }
+
         private void MyInput()
         {
-            Vector2 movIn = playerInputs.Player.Movement.ReadValue<Vector2>();
-            movementInput = movIn;
             horizontalInput = movementInput.x;
             verticalInput = movementInput.y;
 
-            if (playerInputs.Player.Jump.WasPressedThisFrame() && readyToJump && grounded)
+            if (jump && readyToJump && grounded)
             {
-
                 readyToJump = false;
 
                 Jump();
 
                 Invoke(nameof(ResetJump), jumpCooldown); 
             }
-
-            if (playerInputs.Player.Crouch.WasPressedThisFrame())
-            {
-                transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
-                rb.AddForce(Vector3.down * 10f, ForceMode.Impulse);
-            } else if (playerInputs.Player.Crouch.WasReleasedThisFrame())
-            {
-                transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
-            }
-
         }
 
         private void StateHandler()
@@ -158,6 +190,7 @@ namespace ronan.player
             {
                 state = MovementState.climbing;
                 desiredMoveSpeed = climbSpeed;
+                return;
             }
 
             else if (sliding)
@@ -172,13 +205,10 @@ namespace ronan.player
                 {
                     desiredMoveSpeed = sprintSpeed;
                 }
+                
             }
-            else if (playerInputs.Player.Crouch.inProgress)
-            {
-                state = MovementState.crouching;
-                desiredMoveSpeed = crouchSpeed;
-            }
-            else if(grounded && playerInputs.Player.Sprint.inProgress)
+
+            else if(grounded && run)
             {
                 state = MovementState.sprinting;
                 desiredMoveSpeed = sprintSpeed;
@@ -282,6 +312,8 @@ namespace ronan.player
         private void Jump()
         {
             exitingSlope = true;
+
+            anim.SetTrigger("Jump");
 
             rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
