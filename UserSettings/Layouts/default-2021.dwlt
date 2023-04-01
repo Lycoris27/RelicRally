@@ -45,10 +45,17 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 939
+<<<<<<< HEAD
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
   controlID: 15
+=======
+  m_MinSize: {x: 503, y: 321}
+  m_MaxSize: {x: 16192, y: 12117}
+  vertical: 0
+  controlID: 90
+>>>>>>> siyuanBranch
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +75,13 @@ MonoBehaviour:
     y: 0
     width: 454
     height: 939
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> siyuanBranch
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -94,8 +106,13 @@ MonoBehaviour:
     y: 0
     width: 363
     height: 556
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+>>>>>>> siyuanBranch
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -220,10 +237,17 @@ MonoBehaviour:
     y: 0
     width: 1466
     height: 939
+<<<<<<< HEAD
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 16
+=======
+  m_MinSize: {x: 403, y: 321}
+  m_MaxSize: {x: 8096, y: 12117}
+  vertical: 1
+  controlID: 91
+>>>>>>> siyuanBranch
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,7 +272,11 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 17
+=======
+  controlID: 92
+>>>>>>> siyuanBranch
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,8 +296,13 @@ MonoBehaviour:
     y: 0
     width: 1103
     height: 556
+<<<<<<< HEAD
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+>>>>>>> siyuanBranch
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -331,9 +364,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: bc8b0000
     m_LastClickedID: 35772
     m_ExpandedIDs: 00000000bc8b000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: cc700000
+    m_LastClickedID: 28876
+    m_ExpandedIDs: 00000000cc70000000ca9a3bffffff7f
+>>>>>>> siyuanBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -361,7 +400,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000bc8b0000
+=======
+    m_ExpandedIDs: 00000000cc700000
+>>>>>>> siyuanBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -491,9 +534,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 0e8c0000
       m_LastClickedID: 0
       m_ExpandedIDs: 8ce1ffff72e7ffff86eaffff
+=======
+      m_SelectedIDs: 0e710000
+      m_LastClickedID: 0
+      m_ExpandedIDs: e0faffff
+>>>>>>> siyuanBranch
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -838,11 +887,19 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
     m_Target: 270.21527
     speed: 2
     m_Value: 270.21527
+=======
+    m_Value: {x: -0.33944157, y: 0.57452387, z: -0.28309575, w: -0.68893516}
+  m_Size:
+    m_Target: 270.21527
+    speed: 2
+    m_Value: 70.84975
+>>>>>>> siyuanBranch
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -860,7 +917,11 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
+<<<<<<< HEAD
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+=======
+  m_LastSceneViewRotation: {x: -0.3394416, y: 0.57452387, z: -0.28309578, w: -0.68893516}
+>>>>>>> siyuanBranch
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -917,10 +978,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -766
     m_HBaseRangeMax: 766
     m_VBaseRangeMin: -384.5
     m_VBaseRangeMax: 384.5
+=======
+    m_HBaseRangeMin: -734.3334
+    m_HBaseRangeMax: 734.3334
+    m_VBaseRangeMin: -366.33334
+    m_VBaseRangeMax: 366.33334
+>>>>>>> siyuanBranch
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -954,7 +1022,11 @@ MonoBehaviour:
       height: 769
     m_MinimalGUI: 1
   m_defaultScale: 1
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 1532, y: 790}
+=======
+  m_LastWindowPixelSize: {x: 1468.6667, y: 753.6667}
+>>>>>>> siyuanBranch
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
