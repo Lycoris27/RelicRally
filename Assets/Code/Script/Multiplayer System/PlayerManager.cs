@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
     private List<PlayerInput> players = new List<PlayerInput>();
     [SerializeField] private List<Transform> startingPoints;
     [SerializeField] private List<LayerMask> playerLayers;
+    [SerializeField] private List<CinemachineVirtualCamera> vCams;
 
     [SerializeField] private List<CinemachineVirtualCamera> cvc;
 
@@ -23,10 +24,11 @@ public class PlayerManager : MonoBehaviour
 
         int layerToAdd = (int)Mathf.Log(playerLayers[players.Count - 1].value, 2);
 
-
         playerParent.GetComponentInChildren<CinemachineBrain>().gameObject.layer = layerToAdd;
         playerParent.GetComponentInChildren<Camera>().cullingMask |= 1 << layerToAdd;
-        cvc[players.Count - 1].Follow = playerParent.GetComponentInChildren<PlayerMovement>().transform;
-        cvc[players.Count - 1].LookAt = playerParent.GetComponentInChildren<PlayerMovement>().transform;
+        Debug.Log(vCams[players.Count - 1].GetComponent<CameraSetUp>());
+        Debug.Log(vCams[players.Count - 1]);
+        vCams[players.Count - 1].GetComponent<CameraSetUp>().OnSetFollow(player.transform);
+
     }
 }
