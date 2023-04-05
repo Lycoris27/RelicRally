@@ -3892,6 +3892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Super Duper Blox Man
       objectReference: {fileID: 0}
+    - target: {fileID: 3198576007537958028, guid: 3fe3c25e900368e45933eeb32381cc48,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4617951801688630040, guid: 3fe3c25e900368e45933eeb32381cc48,
         type: 3}
       propertyPath: m_RootOrder
