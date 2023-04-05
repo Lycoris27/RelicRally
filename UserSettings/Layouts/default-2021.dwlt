@@ -17,7 +17,7 @@ MonoBehaviour:
     x: 0
     y: 43
     width: 1920
-    height: 989
+    height: 997
   m_ShowMode: 4
   m_Title: Scene
   m_RootView: {fileID: 6}
@@ -91,18 +91,11 @@ MonoBehaviour:
 --- !u!114 &4
 =======
     width: 1920
-    height: 939
-<<<<<<< HEAD
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+    height: 947
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 15
-=======
-  m_MinSize: {x: 503, y: 321}
-  m_MaxSize: {x: 16192, y: 12117}
-  vertical: 0
-  controlID: 90
->>>>>>> siyuanBranch
+  controlID: 107
 --- !u!114 &3
 >>>>>>> main
 MonoBehaviour:
@@ -136,14 +129,9 @@ MonoBehaviour:
     x: 1466
     y: 0
     width: 454
-    height: 939
-<<<<<<< HEAD
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
+    height: 947
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
->>>>>>> siyuanBranch
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -308,14 +296,9 @@ MonoBehaviour:
 =======
     y: 0
     width: 363
-    height: 556
-<<<<<<< HEAD
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
+    height: 599
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
->>>>>>> siyuanBranch
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -337,9 +320,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 556
+    y: 599
     width: 1466
-    height: 383
+    height: 348
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -369,7 +352,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1920
-    height: 989
+    height: 997
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -414,7 +397,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 969
+    y: 977
     width: 1920
     height: 20
   m_MinSize: {x: 0, y: 0}
@@ -439,18 +422,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1466
-    height: 939
-<<<<<<< HEAD
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+    height: 947
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 16
-=======
-  m_MinSize: {x: 403, y: 321}
-  m_MaxSize: {x: 8096, y: 12117}
-  vertical: 1
-  controlID: 91
->>>>>>> siyuanBranch
+  controlID: 108
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -471,15 +447,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1466
-    height: 556
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+    height: 599
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 17
-=======
-  controlID: 92
->>>>>>> siyuanBranch
+  controlID: 109
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -490,7 +462,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -498,14 +470,9 @@ MonoBehaviour:
     x: 363
     y: 0
     width: 1103
-    height: 556
-<<<<<<< HEAD
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
+    height: 599
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
->>>>>>> siyuanBranch
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -536,6 +503,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 847.3334
     width: 1744.3334
     height: 511.6667
@@ -544,6 +512,11 @@ MonoBehaviour:
     width: 1465
     height: 362
 >>>>>>> main
+=======
+    y: 672
+    width: 1465
+    height: 327
+>>>>>>> siyuanBranch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -562,15 +535,20 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Levels/Scenes
 =======
     - Assets
 >>>>>>> main
+=======
+    - Assets/Levels/Scenes/Siyuan_Greybox_Greek
+>>>>>>> siyuanBranch
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 89
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
   - Assets/Levels/Scenes
   m_LastFoldersGridSize: -1
@@ -580,10 +558,16 @@ MonoBehaviour:
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\frizf\Documents\GitHub\RelicRally
 >>>>>>> main
+=======
+  - Assets/Levels/Scenes/Siyuan_Greybox_Greek
+  m_LastFoldersGridSize: 89
+  m_LastProjectPath: D:\GDS212 RelicRally Repo\RelicRally
+>>>>>>> siyuanBranch
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_SelectedIDs: ea6f0000
     m_LastClickedID: 28650
@@ -599,6 +583,11 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000cc70000000ca9a3bffffff7f
 >>>>>>> siyuanBranch
 >>>>>>> main
+=======
+    m_SelectedIDs: 967a0000
+    m_LastClickedID: 31382
+    m_ExpandedIDs: 000000006a7a00007a7a0000847a0000967a000000ca9a3b
+>>>>>>> siyuanBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -627,6 +616,7 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000ce6f0000d06f0000d26f0000d46f0000d66f0000d86f0000
 =======
 <<<<<<< HEAD
@@ -635,6 +625,9 @@ MonoBehaviour:
     m_ExpandedIDs: 00000000cc700000
 >>>>>>> siyuanBranch
 >>>>>>> main
+=======
+    m_ExpandedIDs: 000000006a7a0000
+>>>>>>> siyuanBranch
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -661,7 +654,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -678,7 +671,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -687,7 +680,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 89
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 <<<<<<< HEAD
@@ -724,8 +717,12 @@ MonoBehaviour:
     x: 1466
     y: 73
     width: 453
+<<<<<<< HEAD
     height: 918
 >>>>>>> main
+=======
+    height: 926
+>>>>>>> siyuanBranch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -777,8 +774,12 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 362
+<<<<<<< HEAD
     height: 535
 >>>>>>> main
+=======
+    height: 578
+>>>>>>> siyuanBranch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -786,6 +787,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 72760000
       m_LastClickedID: 30322
@@ -801,6 +803,11 @@ MonoBehaviour:
       m_ExpandedIDs: e0faffff
 >>>>>>> siyuanBranch
 >>>>>>> main
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0efbffff
+>>>>>>> siyuanBranch
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -816,7 +823,11 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
         m_ClientGUIView: {fileID: 2}
+=======
+        m_ClientGUIView: {fileID: 4}
+>>>>>>> siyuanBranch
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -858,8 +869,12 @@ MonoBehaviour:
     x: 363
     y: 73
     width: 1101
+<<<<<<< HEAD
     height: 535
 >>>>>>> main
+=======
+    height: 578
+>>>>>>> siyuanBranch
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1104,11 +1119,12 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: -73.17127, y: 57.30938, z: 31.583147}
     speed: 2
@@ -1118,6 +1134,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 504.5042, y: 260.23917, z: -5.740009}
 >>>>>>> main
+=======
+    m_Target: {x: -65.302414, y: -5.0283785, z: 6.4716396}
+    speed: 2
+    m_Value: {x: -65.302414, y: -5.0283785, z: 6.4716396}
+>>>>>>> siyuanBranch
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1146,24 +1167,25 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
-        speed: 2
-        m_Value: 0
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
-    zGrid:
-      m_Fade:
         m_Target: 1
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
+    zGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
     m_ShowGrid: 1
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_Target: {x: -0.22628511, y: -0.54321223, z: 0.15495737, w: -0.7935738}
     speed: 2
@@ -1179,20 +1201,25 @@ MonoBehaviour:
     m_Value: {x: -0, y: 0, z: -0, w: -1}
   m_Size:
     m_Target: 270.21527
-    speed: 2
-    m_Value: 270.21527
 =======
-    m_Value: {x: -0.33944157, y: 0.57452387, z: -0.28309575, w: -0.68893516}
-  m_Size:
-    m_Target: 270.21527
+    m_Target: {x: -0.1604016, y: 0.8132418, z: -0.2638148, w: -0.4937014}
+>>>>>>> siyuanBranch
     speed: 2
+    m_Value: {x: -0.16194676, y: 0.8100907, z: -0.26279116, w: -0.49846473}
+  m_Size:
+    m_Target: 29.24598
+    speed: 2
+<<<<<<< HEAD
     m_Value: 70.84975
 >>>>>>> siyuanBranch
 >>>>>>> main
+=======
+    m_Value: 29.24598
+>>>>>>> siyuanBranch
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1206,11 +1233,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-<<<<<<< HEAD
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
-=======
-  m_LastSceneViewRotation: {x: -0.3394416, y: 0.57452387, z: -0.28309578, w: -0.68893516}
->>>>>>> siyuanBranch
+  m_LastSceneViewRotation: {x: 0, y: 0, z: 0, w: 0}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -1242,10 +1265,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 507
-    y: 94
-    width: 1532
-    height: 790
+    x: 363
+    y: 73
+    width: 1101
+    height: 578
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1256,10 +1279,10 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1532, y: 769}
+  m_TargetSize: {x: 1101, y: 557}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
-  m_RenderIMGUI: 0
+  m_RenderIMGUI: 1
   m_EnterPlayModeBehavior: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0
@@ -1271,6 +1294,7 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     m_HBaseRangeMin: -510.6667
     m_HBaseRangeMax: 510.6667
@@ -1289,6 +1313,12 @@ MonoBehaviour:
     m_VBaseRangeMax: 366.33334
 >>>>>>> siyuanBranch
 >>>>>>> main
+=======
+    m_HBaseRangeMin: -550.5
+    m_HBaseRangeMax: 550.5
+    m_VBaseRangeMin: -278.5
+    m_VBaseRangeMax: 278.5
+>>>>>>> siyuanBranch
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1297,7 +1327,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1306,22 +1336,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1532
-      height: 769
+      width: 1101
+      height: 557
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 766, y: 384.5}
+    m_Translation: {x: 550.5, y: 278.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -766
-      y: -384.5
-      width: 1532
-      height: 769
+      x: -550.5
+      y: -278.5
+      width: 1101
+      height: 557
     m_MinimalGUI: 1
   m_defaultScale: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_LastWindowPixelSize: {x: 2298, y: 1185}
 =======
@@ -1331,6 +1362,9 @@ MonoBehaviour:
   m_LastWindowPixelSize: {x: 1468.6667, y: 753.6667}
 >>>>>>> siyuanBranch
 >>>>>>> main
+=======
+  m_LastWindowPixelSize: {x: 1101, y: 578}
+>>>>>>> siyuanBranch
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
