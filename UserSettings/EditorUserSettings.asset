@@ -25,6 +25,7 @@ EditorUserSettings:
       value: 5608565755075d0c5b5c097247750b44144e4c737a7b75677d714f36b5e5676a
       flags: 0
     RecentlyUsedSceneGuid-3:
+<<<<<<< HEAD
       value: 500700505d010b0809085c2416775b4441154172287023697f7a4f36e3b0303d
       flags: 0
     RecentlyUsedSceneGuid-4:
@@ -44,6 +45,12 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedSceneGuid-9:
       value: 5b53070253540f0d0e5c5c2449255c44154e497a792c7568282b4c62b4e26368
+=======
+      value: 530104565505590b5d5e5c7240730f404647487a7c7876607d794d63b2b06468
+      flags: 0
+    RecentlyUsedSceneGuid-4:
+      value: 0102525557005c095f0f5e7111750844474e402f797e2268792a4464e0e36d6e
+>>>>>>> frazerBranch02
       flags: 0
 >>>>>>> main
     vcSharedLogLevel:
