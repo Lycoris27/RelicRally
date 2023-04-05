@@ -13,6 +13,7 @@ public class DartLauncher : MonoBehaviour
     [SerializeField] private float restartDelay;
     [Range(1,10)]
     [SerializeField] private float dartSpeed;
+    [Tooltip("To determine how far away the wall is from the launcher, look at the Transform component in Unity's inspector and subtract the relevant axis of the end wall from the relevant axis of the start wall, plus one. F = (startWallAxis - endWallAxis) + 1")]
     [SerializeField] private float endWallDistance;
 
     private float timeElapsed;

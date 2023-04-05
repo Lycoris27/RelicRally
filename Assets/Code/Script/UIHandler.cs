@@ -75,5 +75,9 @@ public class UIHandler : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(newSelectedObject);
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 
 }

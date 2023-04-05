@@ -4,7 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Ground
+=======
+  - Ambience
+  - SFX
+  - Music
+>>>>>>> frazerBranch02
   layers:
   - Default
   - TransparentFX
@@ -12,8 +18,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player 1
+  - Player 2
   - Ground
   - Wall
   - Player1
