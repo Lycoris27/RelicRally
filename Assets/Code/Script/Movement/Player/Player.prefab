@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 1074275176695571413}
   m_Father: {fileID: 1074275176223912281}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1074275175249928862
 MeshFilter:
@@ -114,7 +114,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1074275176812197083}
-  - {fileID: 543450653667111573}
   m_Father: {fileID: 1074275176624701999}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -166,6 +165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 543450653667111573}
   - {fileID: 1074275176624701999}
   - {fileID: 1074275175249928863}
   m_Father: {fileID: 0}
@@ -337,9 +337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0
-  walkSpeed: 7
-  sprintSpeed: 10
-  slideSpeed: 30
+  walkSpeed: 6
+  sprintSpeed: 8
+  slideSpeed: 10
   slopeIncreaseMultiplier: 1.5
   speedIncreaseMultiplier: 2.5
   climbSpeed: 3
@@ -378,7 +378,8 @@ MonoBehaviour:
   playerOrientation: {fileID: 1074275176198000727}
   playerObj: {fileID: 1074275176223912281}
   maxSlideTime: 0.75
-  slideForce: 300
+  slideForce: 80
+  slideTimer: 0
   slideYScale: 0.5
 --- !u!114 &1074275176223912277
 MonoBehaviour:
@@ -398,8 +399,8 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 512
-  climbSpeed: 10
-  maxClimbTime: 0.75
+  climbSpeed: 4
+  maxClimbTime: 1.25
   climbJumpUpForce: 14
   climbJumpBackForce: 12
   climbJumps: 1
@@ -440,7 +441,7 @@ Transform:
   - {fileID: 1074275177120520895}
   - {fileID: 1074275176198000727}
   m_Father: {fileID: 1074275176223912281}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074275176695571412
 GameObject:
@@ -606,12 +607,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1074275176198000727}
+    m_TransformParent: {fileID: 1074275176223912281}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7bb3c360cb66361458a0fa5f868591f3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bb3c360cb66361458a0fa5f868591f3,
         type: 3}
@@ -636,7 +637,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7bb3c360cb66361458a0fa5f868591f3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.009
+      value: -1.0089998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7bb3c360cb66361458a0fa5f868591f3,
         type: 3}
@@ -727,3 +728,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &244357309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132149196023855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa44588d6bf2274cbfb22699a682e2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 1074275176198000726}
+  turnSmoothTime: 50
