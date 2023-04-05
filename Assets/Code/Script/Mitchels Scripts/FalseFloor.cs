@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FalseFloor : MonoBehaviour
+namespace mitchel.traps
 {
-    private void OnTriggerEnter (Collider other)
+    public class FalseFloor : MonoBehaviour
     {
-        if (other.gameObject.GetComponent<MitchPlayerMovement>())
+        private void OnTriggerEnter(Collider other)
         {
-            Destroy(this.gameObject);
+            if (other.gameObject.GetComponent<ronan.player.PlayerMovement>())
+            {
+                Destroy(this.gameObject);
+            }
         }
     }
 }

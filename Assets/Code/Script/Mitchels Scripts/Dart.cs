@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dart : MonoBehaviour
+namespace mitchel.traps
 {
-    [SerializeField] private DartLauncher dartLauncher;
-
-    private void OnTriggerEnter(Collider other)
+    public class Dart : MonoBehaviour
     {
-        if (other.gameObject.GetComponent<MitchPlayerMovement>())
+        [SerializeField] private mitchel.traps.DartLauncher dartLauncher;
+
+        private void OnTriggerEnter(Collider other)
         {
-            dartLauncher.dartHit = true;
+            if (other.gameObject.GetComponent<ronan.player.PlayerMovement>())
+            {
+                dartLauncher.dartHit = true;
+            }
         }
     }
 }
