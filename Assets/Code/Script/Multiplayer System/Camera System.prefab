@@ -97,7 +97,7 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AutoDolly:
-    m_Enabled: 0
+    m_Enabled: 1
     m_PositionOffset: -0.8
     m_SearchRadius: 2
     m_SearchResolution: 5
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_YawDamping: 0
   m_RollDamping: 0
   m_AutoDolly:
-    m_Enabled: 0
+    m_Enabled: 1
     m_PositionOffset: -0.8
     m_SearchRadius: 2
     m_SearchResolution: 5
@@ -320,7 +320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62880803fb3b81e488c53c446e6c82c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: 0
 --- !u!1 &3272999023971591950
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3272999023971591937}
   - component: {fileID: 3272999023971591936}
-  - component: {fileID: 3272999023971591939}
+  - component: {fileID: 282229000292067770}
   m_Layer: 6
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -393,7 +392,7 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 3272999022369606363}
---- !u!114 &3272999023971591939
+--- !u!114 &282229000292067770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -405,7 +404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62880803fb3b81e488c53c446e6c82c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player1: 1
 --- !u!1 &3272999024194960319
 GameObject:
   m_ObjectHideFlags: 0
