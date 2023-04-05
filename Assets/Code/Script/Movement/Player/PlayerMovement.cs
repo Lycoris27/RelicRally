@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
@@ -86,8 +85,6 @@ namespace ronan.player
 
             readyToJump = true;
             moveSpeed = walkSpeed;
-
-    
         }
 
         private void Update()
