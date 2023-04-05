@@ -9,6 +9,7 @@ public class AudioVolumeScript : MonoBehaviour
     // Start is called before the first frame update
     [Header("GameObjects")]
     public GameObject settings;
+    public GameObject ambienceObject;
     [Header("texts")]
     public TextMeshProUGUI MVolumetxt;
     public TextMeshProUGUI MusVolumetxt;
@@ -28,12 +29,23 @@ public class AudioVolumeScript : MonoBehaviour
     private float SFXValue;
     private float ambienceValue;
 
+
+    public AudioSource[] ambienceArray;
+    public AudioSource[] musicArray;
+    public AudioSource[] SFXArray;
+
     void awake()
     {
         MVolumetxt = GetComponent<TextMeshProUGUI>();
         MusVolumetxt = GetComponent<TextMeshProUGUI>();
         SFXVolumetxt = GetComponent<TextMeshProUGUI>();
-        AmbVolumetxt = GetComponent<TextMeshProUGUI>();        
+        AmbVolumetxt = GetComponent<TextMeshProUGUI>();
+        
+  
+    }
+    void Start()
+    {
+
     }
     //  Update is called once per frame
     void Update()
@@ -47,7 +59,21 @@ public class AudioVolumeScript : MonoBehaviour
             ambience = ambienceSlider.value;
             musicValue = master * music;
             SFXValue = master * sfx;
-            ambienceValue = master * ambience;
+
+            for(int i = 0; i < ambienceArray.Length; i++)
+            {
+                ambienceArray[i].volume = master * ambience;
+            }
+            for(int i = 0; i < musicArray.Length; i++)
+            {
+                musicArray[i].volume = master * ambience;
+            }
+            for(int i = 0; i < SFXArray.Length; i++)
+            {
+                SFXArray[i].volume = master * ambience;
+            }
+            //ambienceGameObjects.audioSource.Volume = master*ambience;
+            //ambienceObjects[0].volume = master * ambience;
             
             MVolumetxt.text = master.ToString("00%");
             MusVolumetxt.text = music.ToString("00%");
