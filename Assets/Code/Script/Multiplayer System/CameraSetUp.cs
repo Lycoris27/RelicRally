@@ -6,24 +6,17 @@ using UnityEngine.InputSystem;
 
 public class CameraSetUp : MonoBehaviour
 {
-    [SerializeField] private bool Player1;
     private CinemachineVirtualCamera cvm;
     private Transform target;
+    private int playerNum = 1;
     private void Start()
     {
-        cvm = FindObjectOfType<CinemachineVirtualCamera>();
+        cvm = this.gameObject.GetComponent<CinemachineVirtualCamera>();
+        Debug.Log(cvm);
     }
-    public void OnSetFollow()
+    public void OnSetFollow(Transform player)
     {
-        string player = "Player2";
-        if (Player1) player = "Player1";
-
-        target = GameObject.Find(player).transform;
-
-        cvm.Follow = target;
-        cvm.LookAt = target;
-
+        cvm.Follow = player;
+        cvm.LookAt = player;
     }
-    
-
 }
