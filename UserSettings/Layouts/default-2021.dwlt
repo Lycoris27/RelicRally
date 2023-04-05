@@ -8,6 +8,195 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+<<<<<<< HEAD
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
+  m_ShowMode: 4
+  m_Title: Scene
+  m_RootView: {fileID: 6}
+<<<<<<< HEAD
+  m_MinSize: {x: 875, y: 371}
+=======
+  m_MinSize: {x: 875, y: 300}
+>>>>>>> main
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+<<<<<<< HEAD
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneHierarchyWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1745.3334
+    y: 0
+    width: 411.99988
+    height: 1307.3334
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+=======
+>>>>>>> main
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+<<<<<<< HEAD
+  - {fileID: 2}
+  - {fileID: 4}
+=======
+  - {fileID: 3}
+>>>>>>> main
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+<<<<<<< HEAD
+    width: 2560
+    height: 1307.3334
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 862
+--- !u!114 &4
+=======
+    width: 1920
+    height: 947
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 107
+--- !u!114 &3
+>>>>>>> main
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+<<<<<<< HEAD
+    x: 2157.3333
+    y: 0
+    width: 402.66675
+    height: 1307.3334
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &5
+=======
+    x: 1466
+    y: 0
+    width: 454
+    height: 947
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
+  m_Panes:
+  - {fileID: 13}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+>>>>>>> main
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< HEAD
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 774.6667
+    width: 1745.3334
+    height: 532.6667
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 11}
+  m_Panes:
+  - {fileID: 11}
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 3}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 2560
+    height: 1357.3334
+  m_MinSize: {x: 875, y: 371}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &7
+=======
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
@@ -25,6 +214,7 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,6 +223,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 2560
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &8
+=======
   m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
   m_EditorClassIdentifier:
@@ -50,6 +256,7 @@ MonoBehaviour:
   vertical: 0
   controlID: 119
 --- !u!114 &3
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,6 +265,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
+<<<<<<< HEAD
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+=======
+>>>>>>> main
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+<<<<<<< HEAD
+    y: 1337.3334
+    width: 2560
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 5}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1745.3334
+    height: 1307.3334
+  m_MinSize: {x: 100, y: 200}
+  m_MaxSize: {x: 8096, y: 16192}
+  vertical: 1
+  controlID: 66
+--- !u!114 &10
+=======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name:
   m_EditorClassIdentifier:
@@ -76,6 +326,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &4
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +343,26 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1745.3334
+    height: 774.6667
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &11
+=======
+    y: 0
+    width: 363
+    height: 599
+=======
     width: 228
     height: 394
+>>>>>>> frazerBranch02
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -117,9 +386,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 599
+    width: 1466
+    height: 348
+=======
     y: 394
     width: 921
     height: 271
+>>>>>>> frazerBranch02
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 12}
@@ -148,10 +423,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1920
+    height: 997
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+=======
     width: 1206
     height: 715
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
+>>>>>>> frazerBranch02
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,8 +459,12 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+<<<<<<< HEAD
+  m_LastLoadedLayoutName: 
+=======
   m_LoadedToolbars: []
   m_LastLoadedLayoutName: Default
+>>>>>>> frazerBranch02
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,8 +481,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
+    y: 977
+    width: 1920
+=======
     y: 695
     width: 1206
+>>>>>>> frazerBranch02
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -215,12 +510,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1466
+    height: 947
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 108
+=======
     width: 921
     height: 665
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 92
+>>>>>>> frazerBranch02
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,12 +544,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1466
+    height: 599
+  m_MinSize: {x: 200, y: 100}
+  m_MaxSize: {x: 16192, y: 8096}
+  vertical: 0
+  controlID: 109
+=======
     width: 921
     height: 394
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
   controlID: 93
+>>>>>>> frazerBranch02
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,8 +576,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 228
     y: 0
+<<<<<<< HEAD
+    width: 1103
+    height: 599
+=======
     width: 693
     height: 394
+>>>>>>> frazerBranch02
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -274,6 +592,10 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &12
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,10 +615,29 @@ MonoBehaviour:
     m_Tooltip:
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    y: 847.3334
+    width: 1744.3334
+    height: 511.6667
+=======
+    y: 629
+    width: 1465
+    height: 362
+>>>>>>> main
+=======
+    y: 672
+    width: 1465
+    height: 327
+>>>>>>> siyuanBranch
+=======
     x: 2249
     y: 726.5
     width: 920
     height: 250
+>>>>>>> frazerBranch02
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter:
@@ -311,21 +652,75 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    - Assets/Levels/Scenes
+=======
     - Assets
+>>>>>>> main
+=======
+    - Assets/Levels/Scenes/Siyuan_Greybox_Greek
+>>>>>>> siyuanBranch
+=======
+    - Assets
+>>>>>>> frazerBranch02
     m_Globs: []
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 89
   m_LastFolders:
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  - Assets/Levels/Scenes
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\1027604\Desktop\Git\RelicRally
+=======
+  - Assets
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\frizf\Documents\GitHub\RelicRally
+>>>>>>> main
+=======
+  - Assets/Levels/Scenes/Siyuan_Greybox_Greek
+  m_LastFoldersGridSize: 89
+  m_LastProjectPath: D:\GDS212 RelicRally Repo\RelicRally
+>>>>>>> siyuanBranch
+=======
   - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: U:\layout
+>>>>>>> frazerBranch02
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_SelectedIDs: ea6f0000
+    m_LastClickedID: 28650
+    m_ExpandedIDs: 00000000ce6f0000d06f0000d26f0000d46f0000d66f0000d86f000000ca9a3b
+=======
+<<<<<<< HEAD
+    m_SelectedIDs: bc8b0000
+    m_LastClickedID: 35772
+    m_ExpandedIDs: 00000000bc8b000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: cc700000
+    m_LastClickedID: 28876
+    m_ExpandedIDs: 00000000cc70000000ca9a3bffffff7f
+>>>>>>> siyuanBranch
+>>>>>>> main
+=======
+    m_SelectedIDs: 967a0000
+    m_LastClickedID: 31382
+    m_ExpandedIDs: 000000006a7a00007a7a0000847a0000967a000000ca9a3b
+>>>>>>> siyuanBranch
+=======
     m_SelectedIDs: f4350000
     m_LastClickedID: 13812
     m_ExpandedIDs: 00000000f435000000ca9a3b
+>>>>>>> frazerBranch02
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name:
@@ -353,7 +748,23 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
     m_LastClickedID: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000ce6f0000d06f0000d26f0000d46f0000d66f0000d86f0000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 00000000bc8b0000
+=======
+    m_ExpandedIDs: 00000000cc700000
+>>>>>>> siyuanBranch
+>>>>>>> main
+=======
+    m_ExpandedIDs: 000000006a7a0000
+>>>>>>> siyuanBranch
+=======
     m_ExpandedIDs: 00000000f4350000
+>>>>>>> frazerBranch02
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name:
@@ -397,7 +808,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -406,10 +817,18 @@ MonoBehaviour:
       m_ResourceFile:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 89
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &12
+=======
 --- !u!114 &13
+>>>>>>> main
+=======
+--- !u!114 &13
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -429,10 +848,28 @@ MonoBehaviour:
     m_Tooltip:
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 2157.3335
+    y: 72.66667
+    width: 401.66675
+    height: 1286.3334
+=======
+    x: 1466
+    y: 73
+    width: 453
+<<<<<<< HEAD
+    height: 918
+>>>>>>> main
+=======
+    height: 926
+>>>>>>> siyuanBranch
+=======
     x: 3170
     y: 332.5
     width: 284
     height: 644
+>>>>>>> frazerBranch02
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization:
@@ -447,7 +884,15 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &13
+=======
 --- !u!114 &14
+>>>>>>> main
+=======
+--- !u!114 &14
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -467,17 +912,59 @@ MonoBehaviour:
     m_Tooltip:
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 1745.3334
+    y: 72.66667
+    width: 409.99988
+    height: 1286.3334
+=======
+    x: 0
+    y: 73
+    width: 362
+<<<<<<< HEAD
+    height: 535
+>>>>>>> main
+=======
+    height: 578
+>>>>>>> siyuanBranch
+=======
     x: 2249
     y: 332.5
     width: 227
     height: 373
+>>>>>>> frazerBranch02
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      m_SelectedIDs: 72760000
+      m_LastClickedID: 30322
+      m_ExpandedIDs: e0ebffffcaecffffb4edffff84eeffff8ef0ffff74f1ffff5cf2ffffb8f3ffff88f4ffff72f5ffff24f6ffffd6f6ffffd6f7ffffbcf8ffff08fbffffca770000
+=======
+<<<<<<< HEAD
+      m_SelectedIDs: 0e8c0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8ce1ffff72e7ffff86eaffff
+=======
+      m_SelectedIDs: 0e710000
+      m_LastClickedID: 0
+      m_ExpandedIDs: e0faffff
+>>>>>>> siyuanBranch
+>>>>>>> main
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 0efbffff
+>>>>>>> siyuanBranch
+=======
       m_SelectedIDs:
       m_LastClickedID: 0
       m_ExpandedIDs: 42fbffff
+>>>>>>> frazerBranch02
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name:
@@ -493,15 +980,32 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+        m_ClientGUIView: {fileID: 2}
+=======
+        m_ClientGUIView: {fileID: 4}
+>>>>>>> siyuanBranch
+      m_SearchString: 
+=======
         m_ClientGUIView: {fileID: 0}
       m_SearchString:
+>>>>>>> frazerBranch02
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
     m_LockTracker:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &14
+=======
 --- !u!114 &15
+>>>>>>> main
+=======
+--- !u!114 &15
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -521,12 +1025,269 @@ MonoBehaviour:
     m_Tooltip:
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 0
+    y: 72.66667
+    width: 1744.3334
+    height: 753.6667
+=======
+    x: 363
+    y: 73
+    width: 1101
+<<<<<<< HEAD
+    height: 535
+>>>>>>> main
+=======
+    height: 578
+>>>>>>> siyuanBranch
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+<<<<<<< HEAD
+      snapOffsetDelta: {x: -98.666626, y: -26}
+=======
+      snapOffsetDelta: {x: -101, y: -26}
+>>>>>>> main
+      snapCorner: 3
+      id: Tool Settings
+      index: 0
+      layout: 1
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -141, y: 149}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-grid-and-snap-toolbar
+      index: 1
+      layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-scene-view-toolbar
+      index: 0
+      layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-search-toolbar
+      index: 1
+      layout: 1
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-transform-toolbar
+      index: 0
+      layout: 2
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 197}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-component-tools
+      index: 1
+      layout: 2
+    - dockPosition: 0
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 67.5, y: 86}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Orientation
+      index: 0
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Light Settings
+      index: 0
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Camera
+      index: 1
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Constraints
+      index: 2
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Collisions
+      index: 3
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Navmesh Display
+      index: 4
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Agent Display
+      index: 5
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Obstacle Display
+      index: 6
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Occlusion Culling
+      index: 7
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Physics Debugger
+      index: 8
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Scene Visibility
+      index: 9
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Particles
+      index: 10
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap
+      index: 11
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Palette Helper
+      index: 12
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Animation Rigging
+      index: 11
+      layout: 4
+=======
     x: 2477
     y: 332.5
     width: 691
     height: 373
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
+>>>>>>> frazerBranch02
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
   m_Gizmos: 1
   m_OverrideSceneCullingMask: 6917529027641081856
@@ -537,9 +1298,21 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_Target: {x: -73.17127, y: 57.30938, z: 31.583147}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -73.17109, y: 57.309254, z: 31.583233}
+=======
+    m_Target: {x: 504.5042, y: 260.23917, z: -5.740009}
+    speed: 2
+    m_Value: {x: 504.5042, y: 260.23917, z: -5.740009}
+>>>>>>> main
+=======
+    m_Target: {x: -65.302414, y: -5.0283785, z: 6.4716396}
+    speed: 2
+    m_Value: {x: -65.302414, y: -5.0283785, z: 6.4716396}
+>>>>>>> siyuanBranch
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -585,13 +1358,37 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_Target: {x: -0.22628511, y: -0.54321223, z: 0.15495737, w: -0.7935738}
     speed: 2
-    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+    m_Value: {x: -0.22534505, y: -0.54794866, z: 0.15630795, w: -0.7902783}
   m_Size:
-    m_Target: 10
+    m_Target: 1.8268441
     speed: 2
-    m_Value: 10
+    m_Value: 1.7481762
+=======
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+<<<<<<< HEAD
+    m_Value: {x: -0, y: 0, z: -0, w: -1}
+  m_Size:
+    m_Target: 270.21527
+=======
+    m_Target: {x: -0.1604016, y: 0.8132418, z: -0.2638148, w: -0.4937014}
+>>>>>>> siyuanBranch
+    speed: 2
+    m_Value: {x: -0.16194676, y: 0.8100907, z: -0.26279116, w: -0.49846473}
+  m_Size:
+    m_Target: 29.24598
+    speed: 2
+<<<<<<< HEAD
+    m_Value: 70.84975
+>>>>>>> siyuanBranch
+>>>>>>> main
+=======
+    m_Value: 29.24598
+>>>>>>> siyuanBranch
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -616,7 +1413,15 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &15
+=======
 --- !u!114 &16
+>>>>>>> main
+=======
+--- !u!114 &16
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -636,10 +1441,17 @@ MonoBehaviour:
     m_Tooltip:
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+    x: 363
+    y: 73
+    width: 1101
+    height: 578
+=======
     x: 507
     y: 94
     width: 1532
     height: 790
+>>>>>>> frazerBranch02
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -647,7 +1459,11 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< HEAD
+  m_TargetSize: {x: 1101, y: 557}
+=======
   m_TargetSize: {x: 640, y: 480}
+>>>>>>> frazerBranch02
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 0
@@ -662,10 +1478,38 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_HBaseRangeMin: -510.6667
+    m_HBaseRangeMax: 510.6667
+    m_VBaseRangeMin: -256.33334
+    m_VBaseRangeMax: 256.33334
+=======
+<<<<<<< HEAD
+    m_HBaseRangeMin: -766
+    m_HBaseRangeMax: 766
+    m_VBaseRangeMin: -384.5
+    m_VBaseRangeMax: 384.5
+=======
+    m_HBaseRangeMin: -734.3334
+    m_HBaseRangeMax: 734.3334
+    m_VBaseRangeMin: -366.33334
+    m_VBaseRangeMax: 366.33334
+>>>>>>> siyuanBranch
+>>>>>>> main
+=======
+    m_HBaseRangeMin: -550.5
+    m_HBaseRangeMax: 550.5
+    m_VBaseRangeMin: -278.5
+    m_VBaseRangeMax: 278.5
+>>>>>>> siyuanBranch
+=======
     m_HBaseRangeMin: -766
     m_HBaseRangeMax: 766
     m_VBaseRangeMin: -395
     m_VBaseRangeMax: 395
+>>>>>>> frazerBranch02
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -682,17 +1526,46 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
+<<<<<<< HEAD
+      y: 21
+      width: 1101
+      height: 557
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 550.5, y: 278.5}
+=======
       y: 0
       width: 1532
       height: 790
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 766, y: 395}
+>>>>>>> frazerBranch02
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
+      x: -550.5
+      y: -278.5
+      width: 1101
+      height: 557
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_LastWindowPixelSize: {x: 2298, y: 1185}
+=======
+<<<<<<< HEAD
+  m_LastWindowPixelSize: {x: 1532, y: 790}
+=======
+  m_LastWindowPixelSize: {x: 1468.6667, y: 753.6667}
+>>>>>>> siyuanBranch
+>>>>>>> main
+=======
+  m_LastWindowPixelSize: {x: 1101, y: 578}
+>>>>>>> siyuanBranch
+=======
       x: -766
       y: -395
       width: 1532
@@ -700,12 +1573,21 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1532, y: 790}
+>>>>>>> frazerBranch02
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+--- !u!114 &16
+=======
 --- !u!114 &17
+>>>>>>> main
+=======
+--- !u!114 &17
+>>>>>>> frazerBranch02
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -725,9 +1607,22 @@ MonoBehaviour:
     m_Tooltip:
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 0
+    y: 847.3334
+    width: 1954.3334
+    height: 511.6667
+=======
+=======
+>>>>>>> frazerBranch02
     x: 2249
     y: 726.5
     width: 920
     height: 250
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> frazerBranch02
   m_ViewDataDictionary: {fileID: 0}
 
