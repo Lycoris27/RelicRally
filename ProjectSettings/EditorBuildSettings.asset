@@ -4,6 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< Updated upstream
   m_Scenes:
   - enabled: 1
 <<<<<<< HEAD
@@ -24,4 +25,7 @@ EditorBuildSettings:
     guid: b3f325522a23a674198e56d84c97bc96
 >>>>>>> frazerBranch02
 >>>>>>> ronanBranch
+=======
+  m_Scenes: []
+>>>>>>> Stashed changes
   m_configObjects: {}
