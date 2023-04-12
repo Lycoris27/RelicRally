@@ -9,6 +9,7 @@ using ronan.player;
 public class PlayerManager : MonoBehaviour
 {
     private List<PlayerInput> players = new List<PlayerInput>();
+    public List<PlayerMovement> playerMovement = new List<PlayerMovement>();
     [SerializeField] private List<Transform> startingPoints;
     [SerializeField] private List<LayerMask> playerLayers;
     [SerializeField] private List<CinemachineVirtualCamera> vCams;
@@ -18,6 +19,7 @@ public class PlayerManager : MonoBehaviour
     public void AddPlayer(PlayerInput player)
     {
         players.Add(player);
+        playerMovement.Add(player.GetComponent<PlayerMovement>());
 
         Transform playerParent = player.transform.parent;
         playerParent.transform.position = startingPoints[players.Count - 1].position;

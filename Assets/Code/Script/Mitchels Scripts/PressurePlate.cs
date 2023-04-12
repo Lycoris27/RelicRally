@@ -2,18 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlate : MonoBehaviour
+namespace mitchel.traps
 {
-    public PressurePlateManager pressurePlateManager;
-    public int id;
-
-    private void OnTriggerEnter (Collider other)
+    public class PressurePlate : MonoBehaviour
     {
-        // check if what hit was a player (by tag)
-        if (other.tag == "Player")
+        public PressurePlateManager pressurePlateManager;
+        public int id;
+
+        private void OnTriggerEnter(Collider other)
         {
-            // if hit player, call pressurePlateManager.AddTriggeredPlate(id);
-            pressurePlateManager.AddTriggeredPlate(id);
+            // check if what hit was a player (by tag)
+            if (other.gameObject.GetComponent<ronan.player.PlayerMovement>())
+            {
+                // if hit player, call pressurePlateManager.AddTriggeredPlate(id);
+                pressurePlateManager.AddTriggeredPlate(id);
+            }
         }
     }
 }
