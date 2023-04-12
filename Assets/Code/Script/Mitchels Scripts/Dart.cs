@@ -12,7 +12,16 @@ namespace mitchel.traps
         {
             if (other.gameObject.GetComponent<ronan.player.PlayerMovement>())
             {
-                dartLauncher.dartHit = true;
+                if (dartLauncher.player1 = null)
+                {
+                    dartLauncher.player1 = other.gameObject;
+                    dartLauncher.dartHit = true;
+                }
+                else
+                {
+                    dartLauncher.player2 = other.gameObject;
+                    dartLauncher.dartHit = true;
+                }
             }
         }
     }
