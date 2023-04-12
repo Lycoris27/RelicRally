@@ -73,6 +73,9 @@ public class AudioVolumeScript : MonoBehaviour
         if (settings.activeSelf)
         {
             print("hello!");
+            print(master);
+            print(music);
+            print(sfx);
             master = masterSlider.value;
             music = musicSlider.value;
             sfx = SFXSlider.value;
@@ -80,21 +83,21 @@ public class AudioVolumeScript : MonoBehaviour
             musicValue = master * music;
             SFXValue = master * sfx;
 
-            if (ambienceManager.sounds.Length > 0)
+            if (ambienceManager.sounds.Length > 0 && ambienceManager.sounds != null)
             {
                 foreach (Sound s in ambienceManager.sounds)
                 {
                     s.source.volume = master * ambience;
                 }
             }
-            if (sfxManager.sounds.Length > 0)
+            if (sfxManager.sounds.Length > 0 && sfxManager.sounds != null)
             {
                 foreach(Sound s in sfxManager.sounds)
                 {
                     s.source.volume = master * sfx;
                 }
             }
-            if (musicManager.sounds.Length > 0)
+            if (musicManager.sounds.Length > 0 && musicManager.sounds != null)
             {
                 foreach(Sound s in musicManager.sounds)
                 {
