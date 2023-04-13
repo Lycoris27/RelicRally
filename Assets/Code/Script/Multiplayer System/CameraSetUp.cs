@@ -9,6 +9,7 @@ public class CameraSetUp : MonoBehaviour
     private CinemachineVirtualCamera cvm;
     private Transform target;
     private int playerNum = 1;
+
     private void Start()
     {
         cvm = this.gameObject.GetComponent<CinemachineVirtualCamera>();

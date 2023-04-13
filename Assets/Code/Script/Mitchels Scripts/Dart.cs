@@ -7,22 +7,24 @@ namespace mitchel.traps
     public class Dart : MonoBehaviour
     {
         [SerializeField] private mitchel.traps.DartLauncher dartLauncher;
+        [HideInInspector] public static GameObject hitPlayer;
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<ronan.player.PlayerMovement>())
+            Debug.Log("Something hit!");
+            if (other.transform.parent.gameObject.tag == "Player1")
             {
-                if (dartLauncher.player1 = null)
-                {
-                    dartLauncher.player1 = other.gameObject;
-                    dartLauncher.dartHit = true;
-                }
-                else
-                {
-                    dartLauncher.player2 = other.gameObject;
-                    dartLauncher.dartHit = true;
-                }
+                hitPlayer = other.gameObject;
+                dartLauncher.player1 = hitPlayer;
+                dartLauncher.dartHit = true;
             }
+            else if (other.transform.parent.gameObject.tag == "Player2")
+            {
+                hitPlayer = other.gameObject;
+                dartLauncher.player2 = hitPlayer;
+                dartLauncher.dartHit = true;
+            }
+            Debug.Log("Hit player = " + hitPlayer.transform.parent.gameObject.tag);
         }
     }
 }
