@@ -329,7 +329,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-74304
+  m_Name: pb_Mesh63798
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -687,7 +687,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-81278
+  m_Name: pb_Mesh63896
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2626,7 +2626,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30686
+  m_Name: pb_Mesh63132
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3190,7 +3190,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh30908
+  m_Name: pb_Mesh63382
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4434,7 +4434,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-76016
+  m_Name: pb_Mesh63726
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5125,7 +5125,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh187162
+  m_Name: pb_Mesh63874
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10569,6 +10569,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2068501642153603995, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.115
+      objectReference: {fileID: 0}
     - target: {fileID: 2099665879200042916, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: m_Enabled
@@ -10577,6 +10582,16 @@ PrefabInstance:
     - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1273170613}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner1
+      value: 
+      objectReference: {fileID: 908227671}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner2
       value: 
       objectReference: {fileID: 1273170613}
     - target: {fileID: 2099665879200042920, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
@@ -10607,7 +10622,7 @@ PrefabInstance:
     - target: {fileID: 2099665880230081198, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.05
+      value: 4.395
       objectReference: {fileID: 0}
     - target: {fileID: 2099665880230081200, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
@@ -10674,8 +10689,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: gre_haz_pitfallTrap (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8043554834326255749, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced, type: 3}
+--- !u!1 &908227671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3017926863288498851, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+    type: 3}
+  m_PrefabInstance: {fileID: 908227670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &914907173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10683,9 +10709,24 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2068501642153603995, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.036
+      objectReference: {fileID: 0}
     - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: spawner
+      value: 
+      objectReference: {fileID: 2012670412}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner1
+      value: 
+      objectReference: {fileID: 914907174}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner2
       value: 
       objectReference: {fileID: 2012670412}
     - target: {fileID: 2099665879200042920, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
@@ -10758,15 +10799,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: gre_haz_pitfallTrap (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8043554834326255749, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced, type: 3}
+--- !u!1 &914907174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3017926863288498851, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+    type: 3}
+  m_PrefabInstance: {fileID: 914907173}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &921556223
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-80426
+  m_Name: pb_Mesh63308
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12883,6 +12935,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2068501642153603995, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.568
+      objectReference: {fileID: 0}
     - target: {fileID: 2099665879200042916, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: m_Enabled
@@ -12896,6 +12953,16 @@ PrefabInstance:
     - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: spawner
+      value: 
+      objectReference: {fileID: 22974920}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner1
+      value: 
+      objectReference: {fileID: 1323036923}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner2
       value: 
       objectReference: {fileID: 22974920}
     - target: {fileID: 2099665879200042920, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
@@ -12922,6 +12989,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 5.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099665880230081198, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.685
       objectReference: {fileID: 0}
     - target: {fileID: 2099665880230081200, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
@@ -12988,8 +13060,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: gre_haz_pitfallTrap
       objectReference: {fileID: 0}
+    - target: {fileID: 8043554834326255749, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced, type: 3}
+--- !u!1 &1323036923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3017926863288498851, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+    type: 3}
+  m_PrefabInstance: {fileID: 1323036922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1330125621
 GameObject:
   m_ObjectHideFlags: 0
@@ -15087,6 +15170,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2068501642153603995, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.703
+      objectReference: {fileID: 0}
     - target: {fileID: 2099665879200042916, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: m_Enabled
@@ -15100,6 +15188,16 @@ PrefabInstance:
     - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1996715428}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner1
+      value: 
+      objectReference: {fileID: 1563381077}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: spawner2
       value: 
       objectReference: {fileID: 1996715428}
     - target: {fileID: 2099665879200042920, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
@@ -15121,6 +15219,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 5.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099665880230081198, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.062
       objectReference: {fileID: 0}
     - target: {fileID: 2099665880230081200, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
@@ -15192,8 +15295,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: gre_haz_pitfallTrap (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8043554834326255749, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced, type: 3}
+--- !u!1 &1563381077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3017926863288498851, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+    type: 3}
+  m_PrefabInstance: {fileID: 1563381076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1622122532
 GameObject:
   m_ObjectHideFlags: 0
@@ -15686,7 +15800,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh186718
+  m_Name: pb_Mesh63430
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

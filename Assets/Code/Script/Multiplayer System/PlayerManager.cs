@@ -13,7 +13,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] private List<Transform> startingPoints;
     [SerializeField] private List<LayerMask> playerLayers;
     [SerializeField] private List<CinemachineVirtualCamera> vCams;
-    public int playerManagerNumber = 0;
+    [HideInInspector] public int playerManagerNumber = 0;
 
     [SerializeField] private List<CinemachineVirtualCamera> cvc;
 
