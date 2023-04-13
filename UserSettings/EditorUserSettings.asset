@@ -7,30 +7,13 @@ EditorUserSettings:
   m_ConfigSettings:
 <<<<<<< Updated upstream
     RecentlyUsedSceneGuid-0:
-      value: 52525703510451090e5c0d21417459444e4f1d7b7a7b7f602e284530b7b8616d
+      value: 5b53070253540f0d0e5c5c2449255c44154e497a792c7568282b4c62b4e26368
       flags: 0
     RecentlyUsedSceneGuid-1:
-      value: 5b505251070d580f5c580e7b492159444f161b7f792d27647f2d4d63e0b5306e
+      value: 0201510254015a5f5a0f0f2613705a444f1519292d7d24357a7b1c31bbe46d6e
       flags: 0
     RecentlyUsedSceneGuid-2:
-      value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
-      flags: 0
-    RecentlyUsedSceneGuid-3:
-<<<<<<< HEAD
-      value: 500155070703505d0f0c5c76407a594446164c7f7a2e75357d781c31e4b96661
-=======
-<<<<<<< HEAD
-      value: 500700505d010b0809085c2416775b4441154172287023697f7a4f36e3b0303d
->>>>>>> ronanBranch
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 5b53070253540f0d0e5c5c2449255c44154e497a792c7568282b4c62b4e26368
-=======
-      value: 530104565505590b5d5e5c7240730f404647487a7c7876607d794d63b2b06468
-      flags: 0
-    RecentlyUsedSceneGuid-4:
-      value: 0102525557005c095f0f5e7111750844474e402f797e2268792a4464e0e36d6e
->>>>>>> frazerBranch02
+      value: 5608565755075d0c5b5c097247750b44144e4c737a7b75677d714f36b5e5676a
       flags: 0
 =======
 >>>>>>> Stashed changes
@@ -42,7 +25,7 @@ EditorUserSettings:
   m_VCDebugCmd: 0
   m_VCDebugOut: 0
   m_SemanticMergeMode: 2
-  m_DesiredImportWorkerCount: 4
+  m_DesiredImportWorkerCount: 3
   m_StandbyImportWorkerCount: 2
   m_IdleImportWorkerShutdownDelay: 60000
   m_VCShowFailedCheckout: 1

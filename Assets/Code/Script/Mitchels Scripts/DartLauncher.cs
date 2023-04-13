@@ -2,66 +2,90 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DartLauncher : MonoBehaviour
+namespace mitchel.traps
 {
-    [Header("Essentials")]
-    [SerializeField] private GameObject dart;
-
-    [Header("Parameters")]
-    [SerializeField] private float initialDelay;
-    [Tooltip("The delay before the dart is reset.")]
-    [SerializeField] private float restartDelay;
-    [Range(1,10)]
-    [SerializeField] private float dartSpeed;
-    [Tooltip("To determine how far away the wall is from the launcher, look at the Transform component in Unity's inspector and subtract the relevant axis of the end wall from the relevant axis of the start wall, plus one. F = (startWallAxis - endWallAxis) + 1")]
-    [SerializeField] private float endWallDistance;
-
-    private float timeElapsed;
-    private float lerpDuration;
-    private float startValue = 0;
-    private float endValue;
-    private float valueToLerp;
-    private float initialPosition;
-    [HideInInspector] public bool dartHit;
-
-    void Start()
+    public class DartLauncher : MonoBehaviour
     {
-        endValue = endWallDistance;
-        lerpDuration = (endValue / (dartSpeed * 2));
-        initialPosition = dart.transform.position.x;
-    }
+        [Header("Essentials")]
+        [SerializeField] private GameObject dart;
+        [SerializeField] private ronan.player.PlayerMovement player;
 
-    void Update()
-    {
-        StartCoroutine(DelayBeforeExecute());
+        [Header("Parameters")]
+        [SerializeField] private float initialDelay;
+        [Tooltip("The delay before the dart is reset.")]
+        [SerializeField] private float restartDelay;
+        [Range(1, 10)]
+        [SerializeField] private float dartSpeed;
+        [Tooltip("To determine how far away the wall is from the launcher, look at the Transform component in Unity's inspector and subtract the relevant axis of the end wall from the relevant axis of the start wall, plus one. F = (startWallAxis - endWallAxis) + 1")]
+        [SerializeField] private float endWallDistance;
+        [SerializeField] private float playerEffectTime;
 
-        if (dartHit == true)
-        {
-            Debug.Log("Effect goes here.");
-            // TODO Add a short slowdown effect once the new player controller replaces Super Duper Blox Man.
-            dartHit = false;
-        }
-        else
-        {
-            return;
-        }
-    }
+        private float timeElapsed;
+        private float lerpDuration;
+        private float startValue = 0;
+        private float endValue;
+        private float valueToLerp;
+        private float initialPosition;
+        [HideInInspector] public bool dartHit;
 
-    IEnumerator DelayBeforeExecute()
-    {        
-        yield return new WaitForSeconds(initialDelay);
-        if (timeElapsed < lerpDuration)
+        private float initialPlayerWalkSpeed;
+        private float initialPlayerSprintSpeed;
+        private float affectedPlayerWalkSpeed;
+        private float affectedPlayerSprintSpeed;
+
+        void Start()
         {
-            valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
-            timeElapsed += Time.deltaTime;
+            endValue = endWallDistance;
+            lerpDuration = (endValue / (dartSpeed * 2));
+            initialPosition = dart.transform.position.x;
+            initialPlayerWalkSpeed = player.walkSpeed;
+            initialPlayerSprintSpeed = player.sprintSpeed;
+            affectedPlayerWalkSpeed = player.walkSpeed / 2;
+            affectedPlayerSprintSpeed = player.sprintSpeed / 2;
         }
-        else
+
+        void Update()
         {
-            yield return new WaitForSeconds(restartDelay);
-            dart.transform.position = new Vector3(initialPosition, dart.transform.position.y, dart.transform.position.z);
-            timeElapsed = 0;
+            StartCoroutine(DelayBeforeExecute());
+
+            if (dartHit == true)
+            {
+                Debug.Log("Effect goes here.");
+                StartCoroutine(HitEffect());
+                // TODO Add a short slowdown effect once the new player controller replaces Super Duper Blox Man.
+                dartHit = false;
+            }
+            else
+            {
+                return;
+            }
         }
-        //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
-        dart.transform.position = new Vector3(initialPosition + valueToLerp, dart.transform.position.y, dart.transform.position.z);
+
+        IEnumerator DelayBeforeExecute()
+        {
+            yield return new WaitForSeconds(initialDelay);
+            if (timeElapsed < lerpDuration)
+            {
+                valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
+                timeElapsed += Time.deltaTime;
+            }
+            else
+            {
+                yield return new WaitForSeconds(restartDelay);
+                dart.transform.position = new Vector3(initialPosition, dart.transform.position.y, dart.transform.position.z);
+                timeElapsed = 0;
+            }
+            //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
+            dart.transform.position = new Vector3(initialPosition + valueToLerp, dart.transform.position.y, dart.transform.position.z);
+        }
+
+        IEnumerator HitEffect()
+        {
+            player.walkSpeed = affectedPlayerWalkSpeed;
+            player.sprintSpeed = affectedPlayerWalkSpeed;
+            yield return new WaitForSeconds(playerEffectTime);
+            player.walkSpeed = initialPlayerWalkSpeed;
+            player.sprintSpeed = initialPlayerSprintSpeed;
+        }
     }
 }
