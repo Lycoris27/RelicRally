@@ -8,43 +8,24 @@ using ronan.player;
 
 public class PlayerManager : MonoBehaviour
 {
-    public List<PlayerInput> players = new List<PlayerInput>();
-    public List<PlayerMovement> playerMovement = new List<PlayerMovement>();
-    [SerializeField] private List<Transform> startingPoints;
-    [SerializeField] private List<LayerMask> playerLayers;
-    [SerializeField] private List<CinemachineVirtualCamera> vCams;
-    [HideInInspector] public int playerManagerNumber = 0;
 
-    [SerializeField] private List<CinemachineVirtualCamera> cvc;
+    [HideInInspector] public List<PlayerInput> playerInputs = new List<PlayerInput>();
+    [HideInInspector] public List<PlayerMovement> playerMovement = new List<PlayerMovement>();
+    public List<GameObject> players = new List<GameObject>();
 
-    public void AddPlayer(PlayerInput player)
+    private int count = 0;
+    private void Start()
     {
-        players.Add(player);
-        playerMovement.Add(player.GetComponent<PlayerMovement>());
-
-        Transform playerParent = player.transform.parent;
-        playerParent.transform.position = startingPoints[players.Count - 1].position;
-
-        int layerToAdd = (int)Mathf.Log(playerLayers[players.Count - 1].value, 2);
-
-        playerParent.GetComponentInChildren<CinemachineBrain>().gameObject.layer = layerToAdd;
-        playerParent.GetComponentInChildren<Camera>().cullingMask |= 1 << layerToAdd;
-        Debug.Log(vCams[players.Count - 1].GetComponent<CameraSetUp>());
-        Debug.Log(vCams[players.Count - 1]);
-        vCams[players.Count - 1].GetComponent<CameraSetUp>().OnSetFollow(player.transform);
-        Debug.Log(players[0]);
+        foreach (GameObject player in players)
+        {
+            playerInputs.Add(player.GetComponent<PlayerInput>());
+            playerMovement.Add(player.GetComponent<PlayerMovement>());
+        }
     }
 
-    public void AssignTags() 
+    public void AddPlayer(Gamepad player)
     {
-        if (playerManagerNumber == 0)
-        {
-            players[playerManagerNumber].transform.parent.tag = "Player1";
-            playerManagerNumber++;
-        }
-        else 
-        {
-            players[playerManagerNumber].transform.parent.tag = "Player2";
-        }
+        playerInputs[count].SwitchCurrentControlScheme("Controller", player);
+        count++;
     }
 }
