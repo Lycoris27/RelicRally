@@ -8,11 +8,12 @@ using ronan.player;
 
 public class PlayerManager : MonoBehaviour
 {
-    private List<PlayerInput> players = new List<PlayerInput>();
+    public List<PlayerInput> players = new List<PlayerInput>();
     public List<PlayerMovement> playerMovement = new List<PlayerMovement>();
     [SerializeField] private List<Transform> startingPoints;
     [SerializeField] private List<LayerMask> playerLayers;
     [SerializeField] private List<CinemachineVirtualCamera> vCams;
+    public int playerManagerNumber = 0;
 
     [SerializeField] private List<CinemachineVirtualCamera> cvc;
 
@@ -31,6 +32,19 @@ public class PlayerManager : MonoBehaviour
         Debug.Log(vCams[players.Count - 1].GetComponent<CameraSetUp>());
         Debug.Log(vCams[players.Count - 1]);
         vCams[players.Count - 1].GetComponent<CameraSetUp>().OnSetFollow(player.transform);
+        Debug.Log(players[0]);
+    }
 
+    public void AssignTags() 
+    {
+        if (playerManagerNumber == 0)
+        {
+            players[playerManagerNumber].transform.parent.tag = "Player1";
+            playerManagerNumber++;
+        }
+        else 
+        {
+            players[playerManagerNumber].transform.parent.tag = "Player2";
+        }
     }
 }

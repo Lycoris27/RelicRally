@@ -67,6 +67,7 @@ namespace mitchel.traps
 
             if (dartHit == true)
             {
+                Debug.Log("Something hit!");
                 if (player2 = null)
                 {
                     StartCoroutine(HitEffectPlayer1());
