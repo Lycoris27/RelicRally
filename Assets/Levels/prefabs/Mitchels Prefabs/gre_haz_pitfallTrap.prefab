@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5980cea5183b0aa4887698ceb91ac368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mitchPlayerMovement: {fileID: 0}
-  spawner: {fileID: 2099665880230081202}
+  spawner1: {fileID: 0}
+  spawner2: {fileID: 0}
   spawnOffset: 1
   respawnDelay: 1
 --- !u!1 &2099665880230081202
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 2099665880230081200}
   - component: {fileID: 2099665880230081201}
   m_Layer: 0
-  m_Name: Pit_Spawner
+  m_Name: Pit_Spawner2
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
