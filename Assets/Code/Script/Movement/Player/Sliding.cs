@@ -21,7 +21,6 @@ namespace ronan.player {
         public float maxSlideTime = 0.75f;
         public float slideForce = 300;
         [SerializeField] private float slideTimer;
-        private float maxSlideCooldown = 0.5f;
         private float slideCooldown;
 
         public float slideYScale = 0.5f;
