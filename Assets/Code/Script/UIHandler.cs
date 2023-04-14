@@ -37,6 +37,7 @@ public class UIHandler : MonoBehaviour
         settings.SetActive(false);
         hud.SetActive(false);
         exitCheck.SetActive(false);
+        print("hi");
     }
     private void OnEnable()
     {
