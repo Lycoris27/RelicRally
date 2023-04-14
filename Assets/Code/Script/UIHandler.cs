@@ -17,6 +17,7 @@ public class UIHandler : MonoBehaviour
     public GameObject settings;
     public GameObject hud;
     public GameObject exitCheck;
+    public GameObject menuBackground;
 
     public GameObject resume;
     // Start is called before the first frame update
@@ -25,6 +26,7 @@ public class UIHandler : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         openMenu = new PlayerInputMap();
         audioVolumeScript = this.gameObject.GetComponent<AudioVolumeScript>();
+        menuBackground = GameObject.Find("MenuBackground");
         menu = GameObject.Find("Menu");
         settings = GameObject.Find("Settings");
         hud = GameObject.Find("HUD");
@@ -33,6 +35,7 @@ public class UIHandler : MonoBehaviour
     }
     void Start()
     {
+        menuBackground.SetActive(false);
         menu.SetActive(false);
         settings.SetActive(false);
         hud.SetActive(false);
@@ -77,6 +80,7 @@ public class UIHandler : MonoBehaviour
     {
         EventSet(resume);
         menu.SetActive(true);
+        menuBackground.SetActive(true);
         Time.timeScale = 0f;
         paused = true;
     }
@@ -86,6 +90,7 @@ public class UIHandler : MonoBehaviour
         settings.SetActive(false);
         hud.SetActive(false);
         exitCheck.SetActive(false);
+        menuBackground.SetActive(false);
 
         Time.timeScale = 1f;
         paused = false;

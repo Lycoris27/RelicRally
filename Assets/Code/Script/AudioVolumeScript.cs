@@ -47,6 +47,7 @@ public class AudioVolumeScript : MonoBehaviour
         MusVolumetxt = GetComponent<TextMeshProUGUI>();
         SFXVolumetxt = GetComponent<TextMeshProUGUI>();
         AmbVolumetxt = GetComponent<TextMeshProUGUI>();
+        settings = GameObject.Find("Settings");
 
         
   
