@@ -56,6 +56,9 @@ public class UIHandler : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: number);
         audioVolumeScript.GrabManagers();
+        int y = SceneManager.GetActiveScene().buildIndex;
+        if (y == 2 || y == 3) {hud.SetActive(true);}
+        else {hud.SetActive(false);}
 
     }
 
@@ -65,16 +68,9 @@ public class UIHandler : MonoBehaviour
         {
             int y = SceneManager.GetActiveScene().buildIndex;
             print(y);
-            if(y != 0)
-            {
-                Pause();
-            }
+            if(y != 0) {Pause();}
         }
-        
-        else if(context.performed && (menu.activeSelf || settings.activeSelf))
-        {
-            Resume();
-        }
+        else if(context.performed && (menu.activeSelf || settings.activeSelf)) {Resume();}
     }
     public void Pause()
     {
@@ -83,6 +79,7 @@ public class UIHandler : MonoBehaviour
         menuBackground.SetActive(true);
         Time.timeScale = 0f;
         paused = true;
+        audioVolumeScript.PlayPausedAudio();
     }
     public void Resume()
     {

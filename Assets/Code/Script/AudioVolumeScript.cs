@@ -13,26 +13,26 @@ public class AudioVolumeScript : MonoBehaviour
     //public GameObject musicObject;
     //public GameObject sfxObject;
     [Header("AudioManagers")]
-    public AudioManager sfxManager;
+    //public AudioManager sfxManager;
     public AudioManager musicManager;
     public AudioManager ambienceManager;
     [Header("texts")]
     public TextMeshProUGUI MVolumetxt;
     public TextMeshProUGUI MusVolumetxt;
-    public TextMeshProUGUI SFXVolumetxt;
+    //public TextMeshProUGUI SFXVolumetxt;
     public TextMeshProUGUI AmbVolumetxt;
     [Header("Sliders")]
     public Slider masterSlider;
     public Slider musicSlider;
-    public Slider SFXSlider;
+    //public Slider SFXSlider;
     public Slider ambienceSlider;
     
     private float master;
     private float music;
-    private float sfx;
+    //private float sfx;
     private float ambience;
     private float musicValue;
-    private float SFXValue;
+    //private float SFXValue;
     private float ambienceValue;
 
     public string name;
@@ -45,12 +45,10 @@ public class AudioVolumeScript : MonoBehaviour
     {
         MVolumetxt = GetComponent<TextMeshProUGUI>();
         MusVolumetxt = GetComponent<TextMeshProUGUI>();
-        SFXVolumetxt = GetComponent<TextMeshProUGUI>();
+        //SFXVolumetxt = GetComponent<TextMeshProUGUI>();
         AmbVolumetxt = GetComponent<TextMeshProUGUI>();
         settings = GameObject.Find("Settings");
 
-        
-  
     }
     void Start()
     {
@@ -61,10 +59,9 @@ public class AudioVolumeScript : MonoBehaviour
     {
         ambienceManager = GameObject.Find("AmbienceObject").GetComponent<AudioManager>();
         musicManager = GameObject.Find("MusicObject").GetComponent<AudioManager>();
-        sfxManager = GameObject.Find("SFXObject").GetComponent<AudioManager>();
-        PlayAtStart();
+        //sfxManager = GameObject.Find("SFXObject").GetComponent<AudioManager>();
     }
-    public void PlayAtStart()
+    public void PlayPausedAudio()
     {
         ambienceManager.Play(ambienceManager.sounds[0].name);
     }
@@ -73,16 +70,12 @@ public class AudioVolumeScript : MonoBehaviour
     {
         if (settings.activeSelf)
         {
-            print("hello!");
-            print(master);
-            print(music);
-            print(sfx);
             master = masterSlider.value;
             music = musicSlider.value;
-            sfx = SFXSlider.value;
+            //sfx = SFXSlider.value;
             ambience = ambienceSlider.value;
             musicValue = master * music;
-            SFXValue = master * sfx;
+            //SFXValue = master * sfx;
 
             if (ambienceManager.sounds.Length > 0 && ambienceManager.sounds != null)
             {
@@ -91,6 +84,7 @@ public class AudioVolumeScript : MonoBehaviour
                     s.source.volume = master * ambience;
                 }
             }
+            /*
             if (sfxManager.sounds.Length > 0 && sfxManager.sounds != null)
             {
                 foreach(Sound s in sfxManager.sounds)
@@ -98,6 +92,7 @@ public class AudioVolumeScript : MonoBehaviour
                     s.source.volume = master * sfx;
                 }
             }
+            */
             if (musicManager.sounds.Length > 0 && musicManager.sounds != null)
             {
                 foreach(Sound s in musicManager.sounds)
@@ -107,26 +102,8 @@ public class AudioVolumeScript : MonoBehaviour
             }            
             MVolumetxt.text = master.ToString("00%");
             MusVolumetxt.text = music.ToString("00%");
-            SFXVolumetxt.text = sfx.ToString("00%");
+            //SFXVolumetxt.text = sfx.ToString("00%");
             AmbVolumetxt.text = ambience.ToString("00%");
         }
     }
 }
-            /*
-            for(int i = 0; i < ambienceArray.Length; i++)
-            {
-                ambienceArray[i].volume = master * ambience;
-            }
-            
-
-            for(int i = 0; i < musicArray.Length; i++)
-            {
-                musicArray[i].volume = master * ambience;
-            }
-            for(int i = 0; i < SFXArray.Length; i++)
-            {
-                SFXArray[i].volume = master * ambience;
-            }
-            //ambienceGameObjects.audioSource.Volume = master*ambience;
-            //ambienceObjects[0].volume = master * ambience;
-            */
