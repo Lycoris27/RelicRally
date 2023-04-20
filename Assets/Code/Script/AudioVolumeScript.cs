@@ -13,9 +13,11 @@ public class AudioVolumeScript : MonoBehaviour
     //public GameObject musicObject;
     //public GameObject sfxObject;
     [Header("AudioManagers")]
+    public AudioSource audioSource; 
+    public AudioSource ambienceSource;
     //public AudioManager sfxManager;
-    public AudioManager musicManager;
-    public AudioManager ambienceManager;
+    //public AudioManager musicManager;
+    //public AudioManager ambienceManager;
     [Header("texts")]
     public TextMeshProUGUI MVolumetxt;
     public TextMeshProUGUI MusVolumetxt;
@@ -36,6 +38,7 @@ public class AudioVolumeScript : MonoBehaviour
     private float ambienceValue;
 
     public string name;
+    //public string audioName;
 
     //public AudioSource[] ambienceArray;
     //public AudioSource[] musicArray;
@@ -48,22 +51,38 @@ public class AudioVolumeScript : MonoBehaviour
         //SFXVolumetxt = GetComponent<TextMeshProUGUI>();
         AmbVolumetxt = GetComponent<TextMeshProUGUI>();
         settings = GameObject.Find("Settings");
+        audioSource = GameObject.Find("SceneAudio").GetComponent<AudioSource>();
+        ambienceSource = GameObject.Find("MenuBackground").GetComponent<AudioSource>();
+        
 
     }
     void Start()
     {
-        GrabManagers();
+        //GrabManagers();
         
     }
+    /*
     public void GrabManagers()
     {
-        ambienceManager = GameObject.Find("AmbienceObject").GetComponent<AudioManager>();
-        musicManager = GameObject.Find("MusicObject").GetComponent<AudioManager>();
+
+        //ambienceManager = GameObject.Find("AmbienceObject").GetComponent<AudioManager>();
+        //musicManager = GameObject.Find("MusicObject").GetComponent<AudioManager>();
         //sfxManager = GameObject.Find("SFXObject").GetComponent<AudioManager>();
     }
+    */
     public void PlayPausedAudio()
     {
-        ambienceManager.Play(ambienceManager.sounds[0].name);
+        
+        audioSource.Play();
+        ambienceSource.Pause();
+        //ambienceManager.Play(ambienceManager.sounds[0].name);
+    }
+    public void PauseAudio()
+    {
+        //audioName = audioSource.GetComponet<audioSource>().AudioClip;
+        audioSource.Pause();
+        ambienceSource.Play();
+        
     }
     //  Update is called once per frame
     void Update()
@@ -76,7 +95,7 @@ public class AudioVolumeScript : MonoBehaviour
             ambience = ambienceSlider.value;
             musicValue = master * music;
             //SFXValue = master * sfx;
-
+            /*
             if (ambienceManager.sounds.Length > 0 && ambienceManager.sounds != null)
             {
                 foreach (Sound s in ambienceManager.sounds)
@@ -84,7 +103,8 @@ public class AudioVolumeScript : MonoBehaviour
                     s.source.volume = master * ambience;
                 }
             }
-            /*
+            
+            
             if (sfxManager.sounds.Length > 0 && sfxManager.sounds != null)
             {
                 foreach(Sound s in sfxManager.sounds)
@@ -92,14 +112,15 @@ public class AudioVolumeScript : MonoBehaviour
                     s.source.volume = master * sfx;
                 }
             }
-            */
+            
             if (musicManager.sounds.Length > 0 && musicManager.sounds != null)
             {
                 foreach(Sound s in musicManager.sounds)
                 {
                     s.source.volume = master * music;
                 }
-            }            
+            }
+            */            
             MVolumetxt.text = master.ToString("00%");
             MusVolumetxt.text = music.ToString("00%");
             //SFXVolumetxt.text = sfx.ToString("00%");

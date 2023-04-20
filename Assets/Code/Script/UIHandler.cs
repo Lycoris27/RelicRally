@@ -55,7 +55,7 @@ public class UIHandler : MonoBehaviour
     public void LoadNewScene(int number)
     {
         SceneManager.LoadScene(sceneBuildIndex: number);
-        audioVolumeScript.GrabManagers();
+        //audioVolumeScript.GrabManagers();
         int y = SceneManager.GetActiveScene().buildIndex;
         if (y == 2 || y == 3) {hud.SetActive(true);}
         else {hud.SetActive(false);}
