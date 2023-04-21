@@ -80,7 +80,7 @@ public class AudioVolumeScript : MonoBehaviour
     public void PauseAudio()
     {
         //audioName = audioSource.GetComponet<audioSource>().AudioClip;
-        audioSource.Pause();
+        audioSource.Stop();
         ambienceSource.Play();
         
     }
