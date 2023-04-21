@@ -51,25 +51,25 @@ public class AudioVolumeScript : MonoBehaviour
         //SFXVolumetxt = GetComponent<TextMeshProUGUI>();
         AmbVolumetxt = GetComponent<TextMeshProUGUI>();
         settings = GameObject.Find("Settings");
-        audioSource = GameObject.Find("SceneAudio").GetComponent<AudioSource>();
-        ambienceSource = GameObject.Find("MenuBackground").GetComponent<AudioSource>();
+        
+        
         
 
     }
     void Start()
     {
-        //GrabManagers();
-        
+       
+        GrabManagers();
+        print(audioSource);
     }
-    /*
+    
     public void GrabManagers()
     {
-
-        //ambienceManager = GameObject.Find("AmbienceObject").GetComponent<AudioManager>();
-        //musicManager = GameObject.Find("MusicObject").GetComponent<AudioManager>();
-        //sfxManager = GameObject.Find("SFXObject").GetComponent<AudioManager>();
+        audioSource = GameObject.Find("SceneAudio").GetComponent<AudioSource>();
+        ambienceSource = GameObject.Find("MenuBackground").GetComponent<AudioSource>();
+        
     }
-    */
+    
     public void PlayPausedAudio()
     {
         

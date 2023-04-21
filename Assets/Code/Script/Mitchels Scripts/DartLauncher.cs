@@ -8,7 +8,7 @@ namespace mitchel.traps
     {
         [Header("Essentials")]
         [SerializeField] private GameObject dart;
-        [SerializeField] private ronan.player.PlayerMovement player;
+        //[SerializeField] private ronan.player.PlayerMovement player;
 
         [Header("Parameters")]
         [SerializeField] private float initialDelay;
@@ -19,29 +19,47 @@ namespace mitchel.traps
         [Tooltip("To determine how far away the wall is from the launcher, look at the Transform component in Unity's inspector and subtract the relevant axis of the end wall from the relevant axis of the start wall, plus one. F = (startWallAxis - endWallAxis) + 1")]
         [SerializeField] private float endWallDistance;
         [SerializeField] private float playerEffectTime;
+        [Tooltip("Enabled for Z axis, disabled for X axis.")]
+        [SerializeField] private bool xOrZAxis;
 
         private float timeElapsed;
         private float lerpDuration;
         private float startValue = 0;
         private float endValue;
         private float valueToLerp;
-        private float initialPosition;
+        private float initialPositionX;
+        private float initialPositionZ;
         [HideInInspector] public bool dartHit;
 
-        private float initialPlayerWalkSpeed;
-        private float initialPlayerSprintSpeed;
-        private float affectedPlayerWalkSpeed;
-        private float affectedPlayerSprintSpeed;
+        //private float initialPlayer1WalkSpeed;
+        //private float initialPlayer1SprintSpeed;
+        //private float affectedPlayer1WalkSpeed;
+        //private float affectedPlayer1SprintSpeed;
+
+        //private float initialPlayer2WalkSpeed;
+        //private float initialPlayer2SprintSpeed;
+        //private float affectedPlayer2WalkSpeed;
+        //private float affectedPlayer2SprintSpeed;
+
+        [HideInInspector] public GameObject player1;
+        [HideInInspector] public GameObject player2;
 
         void Start()
         {
             endValue = endWallDistance;
             lerpDuration = (endValue / (dartSpeed * 2));
-            initialPosition = dart.transform.position.x;
-            initialPlayerWalkSpeed = player.walkSpeed;
-            initialPlayerSprintSpeed = player.sprintSpeed;
-            affectedPlayerWalkSpeed = player.walkSpeed / 2;
-            affectedPlayerSprintSpeed = player.sprintSpeed / 2;
+            initialPositionX = dart.transform.position.x;
+            initialPositionZ = dart.transform.position.z;
+
+            //initialPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
+            //initialPlayer1SprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
+            //affectedPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            //affectedPlayer1SprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+
+            //initialPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
+            //initialPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
+            //affectedPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            //affectedPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
         }
 
         void Update()
@@ -50,10 +68,18 @@ namespace mitchel.traps
 
             if (dartHit == true)
             {
-                Debug.Log("Effect goes here.");
-                StartCoroutine(HitEffect());
-                // TODO Add a short slowdown effect once the new player controller replaces Super Duper Blox Man.
-                dartHit = false;
+                if (player1 == mitchel.traps.Dart.hitPlayer)
+                {
+                    StartCoroutine(HitEffectPlayer1());
+                    dartHit = false;
+                    Debug.Log("Player 1 hit!");
+                }
+                else if (player2 == mitchel.traps.Dart.hitPlayer)
+                {
+                    StartCoroutine(HitEffectPlayer2());
+                    dartHit = false;
+                    Debug.Log("Player 2 hit!");
+                }
             }
             else
             {
@@ -64,28 +90,64 @@ namespace mitchel.traps
         IEnumerator DelayBeforeExecute()
         {
             yield return new WaitForSeconds(initialDelay);
-            if (timeElapsed < lerpDuration)
+            if (xOrZAxis == true)
             {
-                valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
-                timeElapsed += Time.deltaTime;
+                if (timeElapsed < lerpDuration)
+                {
+                    valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
+                    timeElapsed += Time.deltaTime;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(restartDelay);
+                    dart.transform.position = new Vector3(initialPositionX, dart.transform.position.y, dart.transform.position.z);
+                    timeElapsed = 0;
+                }
+                //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
+                dart.transform.position = new Vector3(initialPositionX + valueToLerp, dart.transform.position.y, dart.transform.position.z);
             }
-            else
+            else if (xOrZAxis == false)
             {
-                yield return new WaitForSeconds(restartDelay);
-                dart.transform.position = new Vector3(initialPosition, dart.transform.position.y, dart.transform.position.z);
-                timeElapsed = 0;
+                if (timeElapsed < lerpDuration)
+                {
+                    valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
+                    timeElapsed += Time.deltaTime;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(restartDelay);
+                    dart.transform.position = new Vector3(dart.transform.position.x, dart.transform.position.y, initialPositionZ);
+                    timeElapsed = 0;
+                }
+                //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
+                dart.transform.position = new Vector3(dart.transform.position.x, dart.transform.position.y, initialPositionZ + valueToLerp);
             }
-            //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
-            dart.transform.position = new Vector3(initialPosition + valueToLerp, dart.transform.position.y, dart.transform.position.z);
         }
 
-        IEnumerator HitEffect()
+        IEnumerator HitEffectPlayer1()
         {
-            player.walkSpeed = affectedPlayerWalkSpeed;
-            player.sprintSpeed = affectedPlayerWalkSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer1WalkSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer1WalkSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
             yield return new WaitForSeconds(playerEffectTime);
-            player.walkSpeed = initialPlayerWalkSpeed;
-            player.sprintSpeed = initialPlayerSprintSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer1WalkSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer1SprintSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
+        }
+
+        IEnumerator HitEffectPlayer2()
+        {
+            //player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer2WalkSpeed;
+            //player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer2WalkSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+            yield return new WaitForSeconds(playerEffectTime);
+            //player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer2WalkSpeed;
+            //player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer2SprintSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
         }
     }
 }
