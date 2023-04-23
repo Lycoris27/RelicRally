@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 26
+  controlID: 105
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,22 +294,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Alex's Assets/Alex's Prefabs/Nordic
+    - Assets/Art/Alex's Assets/Alex's Materials/Nordic/nor_haz_curvedBridge_URP
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/Alex's Assets/Alex's Prefabs/Nordic
+  - Assets/Art/Alex's Assets/Alex's Materials/Nordic/nor_haz_curvedBridge_URP
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\alexm\OneDrive\Documents\Git Repository\RelicRally
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 219}
-    m_SelectedIDs: 3c730000
-    m_LastClickedID: 29500
-    m_ExpandedIDs: 000000001e710000207100002271000024710000267100003a7300004073000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: ae730000
+    m_LastClickedID: 29614
+    m_ExpandedIDs: 000000001e71000020710000227100002471000026710000287100004073000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -337,7 +337,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e71000020710000227100002471000026710000
+    m_ExpandedIDs: 000000001e7100002071000022710000247100002671000028710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -389,7 +389,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: ca730000
       m_LastClickedID: 0
       m_ExpandedIDs: 0efbffff
       m_RenameOverlay:
@@ -752,9 +752,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.3641613, y: 0.4906168, z: -0.017074108}
+    m_Target: {x: -0.69258714, y: -1.4410326, z: -1.4265227}
     speed: 2
-    m_Value: {x: -1.3641613, y: 0.4906168, z: -0.017074108}
+    m_Value: {x: -0.69258714, y: -1.4410326, z: -1.4265227}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -801,13 +801,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.058181476, y: 0.94147354, z: -0.24875368, w: 0.22026145}
+    m_Target: {x: -0.17455873, y: 0.80787265, z: -0.29332605, w: -0.48060927}
     speed: 2
-    m_Value: {x: 0.058550123, y: 0.9410711, z: -0.24864738, w: 0.2216567}
+    m_Value: {x: -0.17454527, y: 0.80781037, z: -0.29330343, w: -0.4805722}
   m_Size:
-    m_Target: 4.520115
+    m_Target: 3.2614622
     speed: 2
-    m_Value: 4.520115
+    m_Value: 3.2614622
   m_Ortho:
     m_Target: 0
     speed: 2
