@@ -75,7 +75,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 105
+  controlID: 16
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,22 +294,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Alex's Assets/Alex's Materials/Nordic/nor_haz_curvedBridge_URP
+    - Assets/Art/Alex's Assets/Alex's Materials/Nordic/nor_roof_extRoof_URP
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/Alex's Assets/Alex's Materials/Nordic/nor_haz_curvedBridge_URP
+  - Assets/Art/Alex's Assets/Alex's Materials/Nordic/nor_roof_extRoof_URP
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\alexm\OneDrive\Documents\Git Repository\RelicRally
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: ae730000
-    m_LastClickedID: 29614
-    m_ExpandedIDs: 000000001e71000020710000227100002471000026710000287100004073000000ca9a3b
+    scrollPos: {x: 0, y: 207}
+    m_SelectedIDs: d2740000
+    m_LastClickedID: 29906
+    m_ExpandedIDs: 000000001e71000020710000227100002471000026710000387300003c73000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -337,7 +337,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e7100002071000022710000247100002671000028710000
+    m_ExpandedIDs: 000000001e71000020710000227100002471000026710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ca730000
+      m_SelectedIDs: 868effff
       m_LastClickedID: 0
       m_ExpandedIDs: 0efbffff
       m_RenameOverlay:
@@ -752,9 +752,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.69258714, y: -1.4410326, z: -1.4265227}
+    m_Target: {x: 9.537756, y: -3.380035, z: -5.7753983}
     speed: 2
-    m_Value: {x: -0.69258714, y: -1.4410326, z: -1.4265227}
+    m_Value: {x: 9.537756, y: -3.380035, z: -5.7753983}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -793,7 +793,7 @@ MonoBehaviour:
       m_Fade:
         m_Target: 0
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -801,13 +801,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.17455873, y: 0.80787265, z: -0.29332605, w: -0.48060927}
+    m_Target: {x: 0.0693703, y: 0.86883265, z: -0.12731501, w: 0.47340247}
     speed: 2
-    m_Value: {x: -0.17454527, y: 0.80781037, z: -0.29330343, w: -0.4805722}
+    m_Value: {x: 0.06956114, y: 0.86812097, z: -0.12721072, w: 0.47470486}
   m_Size:
-    m_Target: 3.2614622
+    m_Target: 9.762453
     speed: 2
-    m_Value: 3.2614622
+    m_Value: 9.34206
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -825,7 +825,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 0
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.13564011, y: 0.8251599, z: -0.22329545, w: -0.5010056}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
