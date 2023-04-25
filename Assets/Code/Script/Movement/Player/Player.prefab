@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 1074275176223912283}
   - component: {fileID: 1074275176223912282}
   - component: {fileID: 1074275176223912276}
-  - component: {fileID: 1074275176223912277}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -459,8 +458,8 @@ MonoBehaviour:
   slopeIncreaseMultiplier: 1.5
   speedIncreaseMultiplier: 2.5
   climbSpeed: 3
-  groundDrag: 5
-  jumpForce: 9
+  groundDrag: 10
+  jumpForce: 10
   jumpCooldown: 0.25
   airMultiplier: 0.4
   crouchSpeed: 3.5
@@ -497,35 +496,6 @@ MonoBehaviour:
   slideForce: 80
   slideTimer: 0
   slideYScale: 0.5
---- !u!114 &1074275176223912277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074275176223912286}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda5ef37a54b0b749bd78a9f8ab3fc33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camOrientation: {fileID: 1074275177120520895}
-  playerOrientation: {fileID: 1074275176198000727}
-  rb: {fileID: 1074275176223912287}
-  whatIsWall:
-    serializedVersion: 2
-    m_Bits: 512
-  climbSpeed: 4
-  maxClimbTime: 1.25
-  climbJumpUpForce: 14
-  climbJumpBackForce: 12
-  climbJumps: 1
-  detectionLength: 0.7
-  sphereCastRadius: 0.25
-  maxWallLookAngle: 30
-  minWallNormalAngleChange: 0
-  exitingWall: 0
-  exitWallTime: 0
 --- !u!1 &1074275176624701998
 GameObject:
   m_ObjectHideFlags: 0
