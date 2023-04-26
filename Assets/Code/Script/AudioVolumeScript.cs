@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -95,7 +95,12 @@ public class AudioVolumeScript : MonoBehaviour
             ambience = ambienceSlider.value;
             musicValue = master * music;
             //SFXValue = master * sfx;
+            audioSource.volume = musicValue;
+            
+            
             /*
+
+
             if (ambienceManager.sounds.Length > 0 && ambienceManager.sounds != null)
             {
                 foreach (Sound s in ambienceManager.sounds)
