@@ -666,7 +666,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PlContrl1
+  m_Name: PlContrl2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isClimbing
@@ -966,8 +966,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 1ffa207a5c80dd34eadb88db71bdae53,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 4e5a52808548bae4ab2ccadcebc1c264, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1049,7 +1048,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2d32e486bcfa43c43bf2e1c2b991f002, type: 2}
+  m_Motion: {fileID: 7400000, guid: cfac12db9fc4d4a4885dfbf7b0230cb8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

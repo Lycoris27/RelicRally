@@ -2010,7 +2010,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203810612}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -14175,6 +14175,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1610715049}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1622197114 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6134109046232171424, guid: e09d66f9d63714047a42d82bbcb227f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7037152270069673301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1625512961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20953,6 +20959,11 @@ PrefabInstance:
       propertyPath: m_FixedNumberOfSplitScreens
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6134109046232171424, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 65cbb0905232cd744a11edfb53e604d9, type: 2}
     - target: {fileID: 6194429075705018766, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20983,6 +20994,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 8.54
       objectReference: {fileID: 0}
+    - target: {fileID: 6194429076305380326, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1622197114}
     - target: {fileID: 6830695113343250359, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalPosition.x
