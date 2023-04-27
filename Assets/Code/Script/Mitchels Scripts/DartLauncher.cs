@@ -41,9 +41,10 @@ namespace mitchel.traps
         [HideInInspector] public bool dartHit;
 
         private float effectTimeElapsed;
-        private float effectLerpDuration;
+        private float effectEnterLerpDuration;
+        private float effectExitLerpDuration;
         private float effectStartValue = 0;
-        private float effectEndValue;
+        private float effectEndValue = 1;
         private float effectValueToLerp;
 
         //private float initialPlayer1WalkSpeed;
@@ -76,6 +77,8 @@ namespace mitchel.traps
             //affectedPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
             //affectedPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
 
+            effectEnterLerpDuration = effectsFadeInTime;
+            effectExitLerpDuration = effectsFadeOutTime;
             player1Volume.weight = 0;
             player2Volume.weight = 0;
         }
@@ -83,6 +86,7 @@ namespace mitchel.traps
         void Update()
         {
             StartCoroutine(DelayBeforeExecute());
+            Debug.Log(player1Volume.weight);
 
             if (dartHit == true)
             {
@@ -158,9 +162,19 @@ namespace mitchel.traps
             //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer1SprintSpeed;
             player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
             player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
-            if (timeElapsed < lerpDuration)
+            if (enableImageEffects == true)
             {
-                player1Volume.weight = Mathf.Lerp(effectStartValue, effectEndValue, effectTimeElapsed / effectLerpDuration);
+                if (effectTimeElapsed < effectExitLerpDuration)
+                {
+                    player1Volume.weight = Mathf.Lerp(effectEndValue, effectStartValue, effectTimeElapsed / effectExitLerpDuration);
+                    effectTimeElapsed += Time.deltaTime;
+                }
+                else
+                {
+                    player1Volume.weight = effectStartValue;
+                    effectTimeElapsed = 0;
+                }
+                player1Volume.weight = (effectEndValue + effectValueToLerp);
             }
         }
 
