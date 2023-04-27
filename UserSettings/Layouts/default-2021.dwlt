@@ -22,7 +22,7 @@ MonoBehaviour:
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 0
+  m_Maximized: 1
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,6 +146,10 @@ MonoBehaviour:
     height: 973
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,7 +309,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Art/Alex's Assets/Alex's Prefabs/Ancient Greek
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\frizf\Documents\GitHub\RelicRally
   m_LockTracker:
@@ -388,7 +392,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -771,6 +775,7 @@ MonoBehaviour:
     m_Value: {x: 577.4676, y: 232.58708, z: -2.3407898}
   m_RenderMode: 0
   m_SceneViewState:
+    m_AlwaysRefresh: 0
     showFog: 1
     showSkybox: 0
     showFlares: 1
