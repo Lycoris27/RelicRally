@@ -31,15 +31,15 @@ namespace mitchel.traps
         private float initialPositionZ;
         [HideInInspector] public bool dartHit;
 
-        private float initialPlayer1WalkSpeed;
-        private float initialPlayer1SprintSpeed;
-        private float affectedPlayer1WalkSpeed;
-        private float affectedPlayer1SprintSpeed;
+        //private float initialPlayer1WalkSpeed;
+        //private float initialPlayer1SprintSpeed;
+        //private float affectedPlayer1WalkSpeed;
+        //private float affectedPlayer1SprintSpeed;
 
-        private float initialPlayer2WalkSpeed;
-        private float initialPlayer2SprintSpeed;
-        private float affectedPlayer2WalkSpeed;
-        private float affectedPlayer2SprintSpeed;
+        //private float initialPlayer2WalkSpeed;
+        //private float initialPlayer2SprintSpeed;
+        //private float affectedPlayer2WalkSpeed;
+        //private float affectedPlayer2SprintSpeed;
 
         [HideInInspector] public GameObject player1;
         [HideInInspector] public GameObject player2;
@@ -50,15 +50,16 @@ namespace mitchel.traps
             lerpDuration = (endValue / (dartSpeed * 2));
             initialPositionX = dart.transform.position.x;
             initialPositionZ = dart.transform.position.z;
-            initialPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
-            initialPlayer1SprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
-            affectedPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
-            affectedPlayer1SprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
 
-            initialPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
-            initialPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
-            affectedPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
-            affectedPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+            //initialPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
+            //initialPlayer1SprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
+            //affectedPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            //affectedPlayer1SprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+
+            //initialPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
+            //initialPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
+            //affectedPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            //affectedPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
         }
 
         void Update()
@@ -67,13 +68,13 @@ namespace mitchel.traps
 
             if (dartHit == true)
             {
-                if (player2 = null)
+                if (player1 == mitchel.traps.Dart.hitPlayer)
                 {
                     StartCoroutine(HitEffectPlayer1());
                     dartHit = false;
                     Debug.Log("Player 1 hit!");
                 }
-                else
+                else if (player2 == mitchel.traps.Dart.hitPlayer)
                 {
                     StartCoroutine(HitEffectPlayer2());
                     dartHit = false;
@@ -125,20 +126,28 @@ namespace mitchel.traps
 
         IEnumerator HitEffectPlayer1()
         {
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer1WalkSpeed;
-            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer1WalkSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer1WalkSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer1WalkSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
             yield return new WaitForSeconds(playerEffectTime);
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer1WalkSpeed;
-            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer1SprintSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer1WalkSpeed;
+            //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer1SprintSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
         }
 
         IEnumerator HitEffectPlayer2()
         {
-            player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer2WalkSpeed;
-            player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer2WalkSpeed;
+            //player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer2WalkSpeed;
+            //player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer2WalkSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
             yield return new WaitForSeconds(playerEffectTime);
-            player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer2WalkSpeed;
-            player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer2SprintSpeed;
+            //player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer2WalkSpeed;
+            //player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer2SprintSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
+            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
         }
     }
 }

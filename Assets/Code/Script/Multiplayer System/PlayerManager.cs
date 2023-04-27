@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     public List<GameObject> players = new List<GameObject>();
 
     private int count = 0;
+
+    private int playerManagerNumber = 0;
     private void Start()
     {
         foreach (GameObject player in players)
@@ -21,6 +23,9 @@ public class PlayerManager : MonoBehaviour
             playerInputs.Add(player.GetComponent<PlayerInput>());
             playerMovement.Add(player.GetComponent<PlayerMovement>());
         }
+        
+        players[0].tag = "Player1";
+        players[1].tag = "Player2";
     }
 
     public void AddPlayer(Gamepad player)
