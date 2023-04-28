@@ -4952,6 +4952,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2099665879200042917, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: spawner
@@ -20631,7 +20636,7 @@ PrefabInstance:
     - target: {fileID: 520085421184190264, guid: 47a703cf033b9794495151244b98cdc4,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3700972678362555632, guid: 47a703cf033b9794495151244b98cdc4,
         type: 3}
@@ -20697,6 +20702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6717464468941886870, guid: 47a703cf033b9794495151244b98cdc4,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47a703cf033b9794495151244b98cdc4, type: 3}
