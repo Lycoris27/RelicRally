@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 namespace mitchel.traps
 {
@@ -9,6 +11,8 @@ namespace mitchel.traps
         [Header("Essentials")]
         [SerializeField] private GameObject dart;
         //[SerializeField] private ronan.player.PlayerMovement player;
+        [SerializeField] private Volume player1Volume;
+        [SerializeField] private Volume player2Volume;
 
         [Header("Parameters")]
         [SerializeField] private float initialDelay;
@@ -22,6 +26,11 @@ namespace mitchel.traps
         [Tooltip("Enabled for Z axis, disabled for X axis.")]
         [SerializeField] private bool xOrZAxis;
 
+        [Header("Effects Parameters")]
+        [SerializeField] private bool enableImageEffects;
+        [SerializeField] private float effectsFadeInTime;
+        [SerializeField] private float effectsFadeOutTime;
+
         private float timeElapsed;
         private float lerpDuration;
         private float startValue = 0;
@@ -30,6 +39,13 @@ namespace mitchel.traps
         private float initialPositionX;
         private float initialPositionZ;
         [HideInInspector] public bool dartHit;
+
+        /*private float effectTimeElapsed;
+        private float effectEnterLerpDuration;
+        private float effectExitLerpDuration;
+        private float effectStartValue = 0;
+        private float effectEndValue = 1;
+        private float effectValueToLerp;*/
 
         //private float initialPlayer1WalkSpeed;
         //private float initialPlayer1SprintSpeed;
@@ -60,11 +76,17 @@ namespace mitchel.traps
             //initialPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed;
             //affectedPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
             //affectedPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+
+            //effectEnterLerpDuration = effectsFadeInTime;
+            //effectExitLerpDuration = effectsFadeOutTime;
+            player1Volume.weight = 0;
+            player2Volume.weight = 0;
         }
 
         void Update()
         {
             StartCoroutine(DelayBeforeExecute());
+            Debug.Log(player1Volume.weight);
 
             if (dartHit == true)
             {
@@ -130,24 +152,49 @@ namespace mitchel.traps
             //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer1WalkSpeed;
             player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
             player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+            if (enableImageEffects == true)
+            {
+                player1Volume.weight = 1;
+            }
             yield return new WaitForSeconds(playerEffectTime);
             //player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer1WalkSpeed;
             //player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer1SprintSpeed;
             player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
             player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
+            if (enableImageEffects == true)
+            {
+                /*if (effectTimeElapsed < effectExitLerpDuration)
+                {
+                    player1Volume.weight = Mathf.Lerp(effectEndValue, effectStartValue, effectTimeElapsed / effectExitLerpDuration);
+                    effectTimeElapsed += Time.deltaTime;
+                }
+                else
+                {
+                    player1Volume.weight = effectStartValue;
+                    effectTimeElapsed = 0;
+                }
+                player1Volume.weight = (effectEndValue + effectValueToLerp);*/
+
+                player1Volume.weight = 0;
+            }
         }
 
         IEnumerator HitEffectPlayer2()
         {
             //player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = affectedPlayer2WalkSpeed;
             //player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = affectedPlayer2WalkSpeed;
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
-            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+            player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
+            player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
+            if (enableImageEffects == true)
+            {
+                player2Volume.weight = 1;
+            }
             yield return new WaitForSeconds(playerEffectTime);
             //player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = initialPlayer2WalkSpeed;
             //player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = initialPlayer2SprintSpeed;
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
-            player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
+            player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed * 2;
+            player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
+            player2Volume.weight = 0;
         }
     }
 }
