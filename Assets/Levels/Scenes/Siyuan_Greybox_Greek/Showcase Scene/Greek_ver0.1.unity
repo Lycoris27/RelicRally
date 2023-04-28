@@ -59378,6 +59378,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 267a11b08f25a8a4a9c6105b020c95f0, type: 3}
+--- !u!95 &2095393640 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5238707587351236200, guid: e09d66f9d63714047a42d82bbcb227f6,
+    type: 3}
+  m_PrefabInstance: {fileID: 7037152270069673301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2099768742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62050,6 +62056,36 @@ PrefabInstance:
       propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6194429075705018765, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 2095393640}
+    - target: {fileID: 6194429075705018765, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: jumpForce
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194429075705018765, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: walkSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194429075705018765, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: groundDrag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194429075705018765, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: sprintSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194429075705018765, guid: e09d66f9d63714047a42d82bbcb227f6,
+        type: 3}
+      propertyPath: airMultiplier
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6194429075705018766, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62113,7 +62149,7 @@ PrefabInstance:
     - target: {fileID: 6830695113343250359, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06736982
+      value: -0.067369804
       objectReference: {fileID: 0}
     - target: {fileID: 6830695113930542643, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
@@ -62293,7 +62329,7 @@ PrefabInstance:
     - target: {fileID: 7984519671199164842, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.06736982
+      value: -0.067369804
       objectReference: {fileID: 0}
     - target: {fileID: 8643966619371039870, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
