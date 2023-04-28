@@ -21,6 +21,21 @@ namespace mitchel.traps
         private float initialPlayer1SprintSpeed;
         private float initialPlayer2SprintSpeed;
 
+        /*private float timeElapsed;
+        private float lerpDuration;
+        private float startValue = 0;
+        [Range(0,2)]
+        [SerializeField] private float sinkFactor;
+        private float endValue;
+        private float valueToLerp;
+        private float initialPositionX;
+        private float initialPositionZ;*/
+
+        /*private void Start() 
+        {
+            endValue = sinkFactor;
+        }*/
+
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("Something hit!");
@@ -42,12 +57,27 @@ namespace mitchel.traps
 
         IEnumerator DelayRespawnPlayer1()
         {
-            initialPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = 0;
+            player1.GetComponent<ronan.player.PlayerMovement>().isStopped = true;
+            player1.GetComponent<ronan.player.PlayerMovement>().moveSpeed = 0;
+
+            /*if (timeElapsed < lerpDuration)
+                {
+                    valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
+                    timeElapsed += Time.deltaTime;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(restartDelay);
+                    pitfall = new Vector3(initialPositionX, dart.transform.position.y, dart.transform.position.z);
+                    timeElapsed = 0;
+                }
+            //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
+            dart.transform.position = new Vector3(initialPositionX + valueToLerp, dart.transform.position.y, dart.transform.position.z);*/
+
             yield return new WaitForSeconds(respawnDelay);
             player1.gameObject.transform.position = spawner1.transform.position;
             player1.gameObject.transform.Translate(0, spawnOffset, 0);
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = (player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed + initialPlayer1WalkSpeed);
+            player1.GetComponent<ronan.player.PlayerMovement>().isStopped = false;
             player1 = null;
         }
 
