@@ -61,6 +61,7 @@ public class UIHandler : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: number);
         //audioVolumeScript.GrabManagers();
+        Resume();
     }
     public void CheckForHUD()
     {
