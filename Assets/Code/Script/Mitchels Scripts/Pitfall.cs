@@ -16,6 +16,11 @@ namespace mitchel.traps
         private GameObject player1;
         private GameObject player2;
 
+        private float initialPlayer1WalkSpeed;
+        private float initialPlayer2WalkSpeed;
+        private float initialPlayer1SprintSpeed;
+        private float initialPlayer2SprintSpeed;
+
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("Something hit!");
@@ -37,9 +42,12 @@ namespace mitchel.traps
 
         IEnumerator DelayRespawnPlayer1()
         {
+            initialPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = 0;
             yield return new WaitForSeconds(respawnDelay);
             player1.gameObject.transform.position = spawner1.transform.position;
             player1.gameObject.transform.Translate(0, spawnOffset, 0);
+            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = (player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed + initialPlayer1WalkSpeed);
             player1 = null;
         }
 
