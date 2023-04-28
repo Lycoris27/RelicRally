@@ -227,7 +227,7 @@ namespace ronan.player
             }
             else
             {
-                moveSpeed = desiredMoveSpeed;
+                   if(!isStopped)moveSpeed = desiredMoveSpeed; else moveSpeed = 0;
             }
             lastDesiredMoveSpeed = desiredMoveSpeed;
         }
@@ -314,6 +314,7 @@ namespace ronan.player
 
         private void Jump()
         {
+            if(!isStopped){
             exitingSlope = true;
 
             anim.SetTrigger("Jump");
@@ -321,6 +322,8 @@ namespace ronan.player
             rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
             rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
             Debug.Log("Jump");
+            }
+
         }
 
         private void ResetJump()

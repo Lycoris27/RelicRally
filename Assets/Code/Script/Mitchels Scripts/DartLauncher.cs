@@ -40,12 +40,12 @@ namespace mitchel.traps
         private float initialPositionZ;
         [HideInInspector] public bool dartHit;
 
-        private float effectTimeElapsed;
+        /*private float effectTimeElapsed;
         private float effectEnterLerpDuration;
         private float effectExitLerpDuration;
         private float effectStartValue = 0;
         private float effectEndValue = 1;
-        private float effectValueToLerp;
+        private float effectValueToLerp;*/
 
         //private float initialPlayer1WalkSpeed;
         //private float initialPlayer1SprintSpeed;
@@ -77,8 +77,8 @@ namespace mitchel.traps
             //affectedPlayer2WalkSpeed = player2.GetComponent<ronan.player.PlayerMovement>().walkSpeed / 2;
             //affectedPlayer2SprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
 
-            effectEnterLerpDuration = effectsFadeInTime;
-            effectExitLerpDuration = effectsFadeOutTime;
+            //effectEnterLerpDuration = effectsFadeInTime;
+            //effectExitLerpDuration = effectsFadeOutTime;
             player1Volume.weight = 0;
             player2Volume.weight = 0;
         }
