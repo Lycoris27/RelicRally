@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -51,25 +51,25 @@ public class AudioVolumeScript : MonoBehaviour
         //SFXVolumetxt = GetComponent<TextMeshProUGUI>();
         AmbVolumetxt = GetComponent<TextMeshProUGUI>();
         settings = GameObject.Find("Settings");
-        audioSource = GameObject.Find("SceneAudio").GetComponent<AudioSource>();
-        ambienceSource = GameObject.Find("MenuBackground").GetComponent<AudioSource>();
+        
+        
         
 
     }
     void Start()
     {
-        //GrabManagers();
-        
+       
+        GrabManagers();
+        print(audioSource);
     }
-    /*
+    
     public void GrabManagers()
     {
-
-        //ambienceManager = GameObject.Find("AmbienceObject").GetComponent<AudioManager>();
-        //musicManager = GameObject.Find("MusicObject").GetComponent<AudioManager>();
-        //sfxManager = GameObject.Find("SFXObject").GetComponent<AudioManager>();
+        audioSource = GameObject.Find("SceneAudio").GetComponent<AudioSource>();
+        ambienceSource = GameObject.Find("MenuBackground").GetComponent<AudioSource>();
+        
     }
-    */
+    
     public void PlayPausedAudio()
     {
         
@@ -95,7 +95,12 @@ public class AudioVolumeScript : MonoBehaviour
             ambience = ambienceSlider.value;
             musicValue = master * music;
             //SFXValue = master * sfx;
+            audioSource.volume = musicValue;
+            
+            
             /*
+
+
             if (ambienceManager.sounds.Length > 0 && ambienceManager.sounds != null)
             {
                 foreach (Sound s in ambienceManager.sounds)
