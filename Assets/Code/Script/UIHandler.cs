@@ -43,6 +43,10 @@ public class UIHandler : MonoBehaviour
         print("hi");
 
     }
+    void Update()
+    {
+        CheckForHUD();
+    }
     private void OnEnable()
     {
         openMenu.Enable();
@@ -57,6 +61,9 @@ public class UIHandler : MonoBehaviour
     {
         SceneManager.LoadScene(sceneBuildIndex: number);
         //audioVolumeScript.GrabManagers();
+    }
+    public void CheckForHUD()
+    {
         int y = SceneManager.GetActiveScene().buildIndex;
         if (y == 2 || y == 3) {hud.SetActive(true);}
     }
