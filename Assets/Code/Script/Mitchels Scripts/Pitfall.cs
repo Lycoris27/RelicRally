@@ -42,12 +42,12 @@ namespace mitchel.traps
 
         IEnumerator DelayRespawnPlayer1()
         {
-            initialPlayer1WalkSpeed = player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed;
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = 0;
+            player1.GetComponent<ronan.player.PlayerMovement>().isStopped = true;
+            player1.GetComponent<ronan.player.PlayerMovement>().moveSpeed = 0;
             yield return new WaitForSeconds(respawnDelay);
             player1.gameObject.transform.position = spawner1.transform.position;
             player1.gameObject.transform.Translate(0, spawnOffset, 0);
-            player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed = (player1.GetComponent<ronan.player.PlayerMovement>().walkSpeed + initialPlayer1WalkSpeed);
+            player1.GetComponent<ronan.player.PlayerMovement>().isStopped = false;
             player1 = null;
         }
 
