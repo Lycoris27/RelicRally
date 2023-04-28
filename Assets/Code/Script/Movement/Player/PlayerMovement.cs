@@ -18,7 +18,7 @@ namespace ronan.player
         public float climbSpeed = 3f;
 
         public float groundDrag = 5;
-
+        public bool isStopped;
         private float desiredMoveSpeed;
         private float lastDesiredMoveSpeed;
 
@@ -234,29 +234,35 @@ namespace ronan.player
 
         private IEnumerator SmoothlyLerpMoveSpeed()
         {
-            // smoothly lerp movementSpeed to desired value
-            float time = 0;
-            float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
-            float startValue = moveSpeed;
-
-            while (time < difference)
+            if(!isStopped)
             {
-                moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
+                // smoothly lerp movementSpeed to desired value
+                float time = 0;
+                float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
+                float startValue = moveSpeed;
 
-                if (OnSlope())
+                while (time < difference)
                 {
-                    float slopeAngle = Vector3.Angle(Vector3.up, slopeHit.normal);
-                    float slopeAngleIncrease = 1 + (slopeAngle / 90f);
+                    moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
 
-                    time += Time.deltaTime * speedIncreaseMultiplier * slopeIncreaseMultiplier * slopeAngleIncrease;
+                    if (OnSlope())
+                    {
+                        float slopeAngle = Vector3.Angle(Vector3.up, slopeHit.normal);
+                        float slopeAngleIncrease = 1 + (slopeAngle / 90f);
+
+                        time += Time.deltaTime * speedIncreaseMultiplier * slopeIncreaseMultiplier * slopeAngleIncrease;
+                    }
+                    else
+                        time += Time.deltaTime * speedIncreaseMultiplier;
+
+                    yield return null;
                 }
-                else
-                    time += Time.deltaTime * speedIncreaseMultiplier;
 
-                yield return null;
+                moveSpeed = desiredMoveSpeed;
+            } else {
+                moveSpeed = 0f;
             }
 
-            moveSpeed = desiredMoveSpeed;
         }
 
 
