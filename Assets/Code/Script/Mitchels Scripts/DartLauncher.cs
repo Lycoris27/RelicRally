@@ -154,7 +154,6 @@ namespace mitchel.traps
             player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
             if (enableImageEffects == true)
             {
-                Debug.Log("Hi");
                 player1Volume.weight = 1;
             }
             yield return new WaitForSeconds(playerEffectTime);
@@ -164,7 +163,7 @@ namespace mitchel.traps
             player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player1.GetComponent<ronan.player.PlayerMovement>().sprintSpeed * 2;
             if (enableImageEffects == true)
             {
-                if (effectTimeElapsed < effectExitLerpDuration)
+                /*if (effectTimeElapsed < effectExitLerpDuration)
                 {
                     player1Volume.weight = Mathf.Lerp(effectEndValue, effectStartValue, effectTimeElapsed / effectExitLerpDuration);
                     effectTimeElapsed += Time.deltaTime;
@@ -174,7 +173,9 @@ namespace mitchel.traps
                     player1Volume.weight = effectStartValue;
                     effectTimeElapsed = 0;
                 }
-                player1Volume.weight = (effectEndValue + effectValueToLerp);
+                player1Volume.weight = (effectEndValue + effectValueToLerp);*/
+
+                player1Volume.weight = 0;
             }
         }
 
@@ -186,7 +187,6 @@ namespace mitchel.traps
             player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed = player2.GetComponent<ronan.player.PlayerMovement>().sprintSpeed / 2;
             if (enableImageEffects == true)
             {
-                Debug.Log("Hi");
                 player2Volume.weight = 1;
             }
             yield return new WaitForSeconds(playerEffectTime);
