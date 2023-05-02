@@ -53,7 +53,8 @@ public class BaseSceneManager : MonoBehaviour
 
     public static void LoadScene(int sceneIndex,bool restart)
     {
-        instance.StartCoroutine(instance.FadeScene(sceneIndex,restart, 1, 1));
+        instance.StartCoroutine(instance.FadeScene(sceneIndex,restart, 1, 2));
+        
     }
 
     private IEnumerator FadeScene(int sceneIndex, bool restart, float duration, float waitTime)
