@@ -4972,6 +4972,11 @@ PrefabInstance:
       propertyPath: spawner2
       value: 
       objectReference: {fileID: 1208316998}
+    - target: {fileID: 2099665879200042919, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
+        type: 3}
+      propertyPath: sinkFactor
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2099665879200042920, guid: 7bf4cb2486c5ecf4084fa4b2fa80eced,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -21503,7 +21508,7 @@ PrefabInstance:
     - target: {fileID: 6830695113343250359, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.067369804
+      value: -0.06736982
       objectReference: {fileID: 0}
     - target: {fileID: 6830695113930542640, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
@@ -21733,7 +21738,7 @@ PrefabInstance:
     - target: {fileID: 7984519671199164842, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.067369804
+      value: -0.06736982
       objectReference: {fileID: 0}
     - target: {fileID: 8643966619371039870, guid: e09d66f9d63714047a42d82bbcb227f6,
         type: 3}
