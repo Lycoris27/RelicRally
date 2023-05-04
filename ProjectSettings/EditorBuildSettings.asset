@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/MuseumGreybox.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Levels/Scenes/Siyuan_Greybox_Greek/Showcase Scene/Greek_ver0.1.unity
+    guid: 2b66c84b97e0cc84797053e9605902f6
+  - enabled: 1
+    path: Assets/Levels/Scenes/NordicGreybox.unity
+    guid: 30aab69fbb0409f40a456f3e01abf929
   m_configObjects: {}
