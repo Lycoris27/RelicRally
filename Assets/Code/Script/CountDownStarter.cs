@@ -16,7 +16,11 @@ public class CountDownStarter : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(2f);
         print("dingdong");
+<<<<<<< HEAD
         //uihandler.CountDownStart();
+=======
+        uihandler.CountDownStart();
+>>>>>>> d9106e2... UI and Audio work, my apologies for forgetting do it in my branch
     }
 
 }
