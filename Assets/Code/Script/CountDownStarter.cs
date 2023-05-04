@@ -16,7 +16,7 @@ public class CountDownStarter : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(2f);
         print("dingdong");
-        uihandler.CountDownStart();
+        //uihandler.CountDownStart();
     }
 
 }
