@@ -6,9 +6,6 @@ namespace mitchel.traps
 {
     public class Pitfall : MonoBehaviour
     {
-        [Header("Essentials")]
-        [SerializeField] private GameObject quicksandPool;
-
         [Header("Respawning")]
         public GameObject spawner1;
         public GameObject spawner2;
@@ -24,7 +21,7 @@ namespace mitchel.traps
         private float initialPlayer1SprintSpeed;
         private float initialPlayer2SprintSpeed;
 
-        private float timeElapsed;
+        /*private float timeElapsed;
         private float lerpDuration;
         private float startValue = 0;
         [Range(0,2)]
@@ -32,13 +29,12 @@ namespace mitchel.traps
         private float endValue;
         private float valueToLerp;
         private float initialPositionX;
-        private float initialPositionZ;
+        private float initialPositionZ;*/
 
-        private void Start() 
+        /*private void Start() 
         {
             endValue = sinkFactor;
-            GetComponent<BoxCollider>().enabled = false;
-        }
+        }*/
 
         private void OnTriggerEnter(Collider other)
         {
@@ -75,6 +71,7 @@ namespace mitchel.traps
                     pitfall = new Vector3(initialPositionX, dart.transform.position.y, dart.transform.position.z);
                     timeElapsed = 0;
                 }
+            //Debug.Log("valueToLerp = " + valueToLerp + ", timeElapsed = " + timeElapsed + ", lerpDuration = " + lerpDuration);
             dart.transform.position = new Vector3(initialPositionX + valueToLerp, dart.transform.position.y, dart.transform.position.z);*/
 
             yield return new WaitForSeconds(respawnDelay);
