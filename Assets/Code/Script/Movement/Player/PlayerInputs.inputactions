@@ -241,6 +241,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1d753040-0a67-4c6b-9a66-af4181f13d0c",
+                    "path": "<Gamepad>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "3d78b650-5fbc-4930-b470-fda15e8575d5",
                     "path": "<Keyboard>/c",
                     "interactions": "",
