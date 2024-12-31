@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Levels/Scenes/TitleScreen.unity
+    path: Assets/Levels/Scenes/Final/TitleScreen.unity
     guid: bc619408d1b12a4499eebc8ee5e7729d
   - enabled: 1
-    path: Assets/Levels/Scenes/MuseumGreybox.unity
+    path: Assets/Levels/Scenes/Final/MuseumGreybox.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Levels/Scenes/NordicGreybox.unity
+    path: Assets/Levels/Scenes/Final/NordicGreybox.unity
     guid: 30aab69fbb0409f40a456f3e01abf929
   - enabled: 1
-    path: Assets/Levels/Scenes/Siyuan_Greybox_Greek/Showcase Scene/Greek_ver0.1.unity
+    path: Assets/Levels/Scenes/Final/Greek_ver0.1.unity
     guid: 2b66c84b97e0cc84797053e9605902f6
   m_configObjects: {}
